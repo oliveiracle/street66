@@ -2189,94 +2189,39 @@ body {
      50% { opacity: 0.7; }
 }
 
+.hours-details {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     text-align: center;
+}
+
 .hours-text {
      font-family: var(--font-body);
      color: var(--vintage-cream);
-     font-size: 1rem;
+     font-size: 0.95rem;
      font-weight: 600;
-}
-
-.call-button {
-     background: var(--vintage-gold);
-     color: var(--background-dark);
-     padding: 8px 20px;
-     border-radius: 25px;
-     text-decoration: none;
-     font-family: var(--font-nav);
-     font-weight: bold;
-     font-size: 0.9rem;
-     transition: all 0.3s ease;
-     border: 2px solid transparent;
-}
-
-.call-button:hover {
-     background: var(--vintage-cream);
-     border-color: var(--vintage-gold);
-     transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
      .hours-container {
-          gap: 10px;
+          gap: 15px;
           font-size: 0.85rem;
+          flex-direction: column;
      }
      .status-badge {
           font-size: 0.8rem;
           padding: 5px 12px;
      }
      .hours-text {
-          font-size: 0.85rem;
-     }
-     .call-button {
           font-size: 0.8rem;
-          padding: 6px 15px;
      }
 }
 
 /* ==================================================
-   WHATSAPP FLOATING BUTTON
+   WHATSAPP FLOATING BUTTON - REMOVED
+   Contact only via email now
    ================================================== */
-.whatsapp-float {
-     position: fixed;
-     bottom: 25px;
-     right: 25px;
-     background: #25D366;
-     color: white;
-     width: 60px;
-     height: 60px;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-     z-index: 1000;
-     transition: all 0.3s ease;
-     text-decoration: none;
-}
-
-.whatsapp-float:hover {
-     background: #128C7E;
-     transform: scale(1.1);
-     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-}
-
-.whatsapp-float svg {
-     width: 35px;
-     height: 35px;
-}
-
-@media (max-width: 768px) {
-     .whatsapp-float {
-          bottom: 20px;
-          right: 20px;
-          width: 55px;
-          height: 55px;
-     }
-     .whatsapp-float svg {
-          width: 30px;
-          height: 30px;
-     }
-}
 
 /* ==================================================
    360px
@@ -2334,18 +2279,6 @@ body {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-     }
-     
-     /* WhatsApp button - already sized but ensure consistency */
-     .whatsapp-float {
-          width: 56px;
-          height: 56px;
-     }
-     
-     /* Opening hours call button */
-     .hours-call-btn {
-          min-height: 44px;
-          padding: 10px 20px;
      }
      
      /* Gallery controls */

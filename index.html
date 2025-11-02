@@ -52,7 +52,6 @@
       "description": "Vintage bar in Temple Bar offering live music, craft cocktails, and unique Andy Warhol-inspired atmosphere.",
       "@id": "https://street66dublin.com",
       "url": "https://street66dublin.com",
-      "telephone": "+353862727181",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -69,8 +68,26 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "16:00",
+          "dayOfWeek": "Sunday",
+          "opens": "13:00",
+          "closes": "23:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "15:00",
+          "closes": "23:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "15:00",
+          "closes": "02:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "13:00",
           "closes": "02:30"
         }
       ],
@@ -129,8 +146,12 @@
         <div class="opening-hours-banner">
             <div class="hours-container">
                 <span class="status-badge open">● OPEN NOW</span>
-                <span class="hours-text">Mon-Sun: 5:00 PM - 2:30 AM</span>
-                <a href="tel:+35318735016" class="call-button">📞 Call Us</a>
+                <div class="hours-details">
+                    <span class="hours-text">Sun: 1:00 PM - 11:30 PM</span>
+                    <span class="hours-text">Mon-Thu: 3:00 PM - 11:30 PM</span>
+                    <span class="hours-text">Fri: 3:00 PM - 2:30 AM</span>
+                    <span class="hours-text">Sat: 1:00 PM - 2:30 AM</span>
+                </div>
             </div>
         </div>
 
@@ -216,17 +237,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/353862727181?text=Hi!%20I%20want%20to%20know%20more%20about%20Street%2066%20Bar" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener"
-       aria-label="Contact us on WhatsApp">
-        <svg viewBox="0 0 32 32" width="32" height="32">
-            <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.961 0-7.51 6.11-13.621 13.621-13.621s13.621 6.11 13.621 13.621c0 7.51-6.11 13.038-13.621 13.038zM21.305 18.421c-0.365-0.183-2.159-1.066-2.492-1.183-0.334-0.117-0.576-0.183-0.819 0.183s-0.941 1.183-1.153 1.425c-0.213 0.243-0.425 0.273-0.79 0.091s-1.542-0.568-2.937-1.811c-1.085-0.968-1.818-2.164-2.031-2.529s-0.023-0.563 0.161-0.745c0.165-0.165 0.365-0.425 0.548-0.639 0.183-0.213 0.243-0.365 0.365-0.608s0.061-0.456-0.030-0.639c-0.091-0.183-0.819-1.975-1.122-2.701-0.293-0.707-0.593-0.611-0.819-0.622-0.213-0.011-0.456-0.013-0.699-0.013s-0.639 0.091-0.973 0.456c-0.334 0.365-1.275 1.245-1.275 3.037s1.305 3.524 1.488 3.766c0.183 0.243 2.581 3.935 6.251 5.519 0.873 0.378 1.555 0.604 2.086 0.773 0.878 0.279 1.677 0.24 2.308 0.145 0.704-0.105 2.159-0.883 2.463-1.735s0.304-1.582 0.213-1.735c-0.091-0.152-0.334-0.243-0.699-0.425z"></path>
-        </svg>
-    </a>
 
 </body>
 </html>
