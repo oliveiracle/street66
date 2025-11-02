@@ -2140,81 +2140,45 @@ body {
 }
 
 /* ==================================================
-   OPENING HOURS BANNER
+   OPENING HOURS IN FOOTER
    ================================================== */
-.opening-hours-banner {
-     background: linear-gradient(135deg, var(--vintage-brown) 0%, var(--accent-burgundy) 100%);
-     border-bottom: 3px solid var(--vintage-gold);
-     padding: 12px 0;
-     position: sticky;
-     top: 0;
-     z-index: 999;
-     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+.footer-hours {
+     text-align: center;
+     margin-top: 15px;
+     padding: 15px;
+     background: rgba(139, 69, 19, 0.3);
+     border-radius: 8px;
+     border: 1px solid var(--vintage-bronze);
 }
 
-.hours-container {
-     max-width: 1200px;
-     margin: 0 auto;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 20px;
-     flex-wrap: wrap;
-     padding: 0 20px;
-}
-
-.status-badge {
-     font-family: var(--font-nav);
+.footer-hours .hours-title {
+     font-family: var(--font-display);
+     color: var(--vintage-gold);
+     font-size: 1.1rem;
      font-weight: bold;
-     font-size: 0.9rem;
-     padding: 6px 15px;
-     border-radius: 20px;
+     margin-bottom: 10px;
      text-transform: uppercase;
      letter-spacing: 1px;
 }
 
-.status-badge.open {
-     background: #25D366;
-     color: white;
-     animation: pulse 2s infinite;
-}
-
-.status-badge.closed {
-     background: #DC143C;
-     color: white;
-}
-
-@keyframes pulse {
-     0%, 100% { opacity: 1; }
-     50% { opacity: 0.7; }
-}
-
-.hours-details {
-     display: flex;
-     flex-direction: column;
-     gap: 5px;
-     text-align: center;
-}
-
-.hours-text {
+.footer-hours p {
      font-family: var(--font-body);
      color: var(--vintage-cream);
-     font-size: 0.95rem;
-     font-weight: 600;
+     font-size: 0.9rem;
+     margin: 5px 0;
+     line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-     .hours-container {
-          gap: 15px;
+     .footer-hours {
+          margin-top: 20px;
+          padding: 12px;
+     }
+     .footer-hours .hours-title {
+          font-size: 1rem;
+     }
+     .footer-hours p {
           font-size: 0.85rem;
-          flex-direction: column;
-     }
-     .status-badge {
-          font-size: 0.8rem;
-          padding: 5px 12px;
-     }
-     .hours-text {
-          font-size: 0.8rem;
      }
 }
 

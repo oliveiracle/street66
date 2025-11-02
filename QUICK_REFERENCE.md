@@ -40,16 +40,21 @@ Gradient buttons           →    Solid vintage colors
 
 ## 📱 Mobile Features Added
 
-### 1. WhatsApp Floating Button
+### 1. Opening Hours Banner ⭐
 
 ```
-Position: Fixed bottom-right (20px, 20px)
-Size: 56x56px
-Color: WhatsApp Green (#25D366)
-Icon: SVG WhatsApp logo
-Link: wa.me/353862727181
-Message: Pre-filled inquiry about Street 66 Bar
+Position: Sticky at top of page
+Status Badge: "OPEN NOW" with pulse animation
+Hours Display:
+  - Sunday: 1:00 PM - 11:30 PM
+  - Monday-Thursday: 3:00 PM - 11:30 PM
+  - Friday: 3:00 PM - 2:30 AM
+  - Saturday: 1:00 PM - 2:30 AM
+Contact: Email only (no phone/WhatsApp)
+Responsive: Stacks vertically on mobile
 ```
+
+### 2. Enhanced Google Maps
 
 ### 2. Opening Hours Banner
 
@@ -84,9 +89,9 @@ Features:
 - [x] Map action buttons
 - [x] Navigation links
 - [x] Social media icons
-- [x] WhatsApp float button
-- [x] Opening hours call button
 - [x] Form inputs
+- [N/A] WhatsApp button (removed - email only)
+- [N/A] Phone call button (removed - email only)
 
 ### Performance
 
@@ -122,17 +127,17 @@ Features:
 
 ### One-Tap Actions
 
-1. **Call Bar:** Click phone number anywhere → instant call
-2. **WhatsApp:** Click float button → opens WhatsApp with message
-3. **Directions:** Click directions button → Google Maps navigation
-4. **Social Media:** Click icons → opens app/website
+1. **Email Contact:** Contact form for email communication only
+2. **Directions:** Click directions button → Google Maps navigation
+3. **Social Media:** Click icons → opens app/website
+4. **View Schedule:** Opening hours visible on homepage
 
 ### Visual Hierarchy
 
-1. **Sticky Hours Banner:** Always visible, shows open status
-2. **WhatsApp Float:** Always accessible, never hidden
-3. **Large Touch Targets:** Comfortable finger tapping
-4. **Clear CTAs:** Obvious action buttons
+1. **Sticky Hours Banner:** Always visible, shows detailed schedule
+2. **Opening Hours Display:** Complete weekly schedule at a glance
+3. **Large Touch Targets:** Comfortable finger tapping (44x44px)
+4. **Clear CTAs:** Obvious action buttons with vintage styling
 
 ### Speed Optimizations
 
@@ -214,9 +219,9 @@ https://cards-dev.twitter.com/validator
 
 - Name: Street 66 Bar
 - Address: 16-17 Parliament St, Temple Bar, Dublin 2
-- Phone: +353862727181
+- Contact: Email only (via contact form)
 - Instagram: @street66dublin
-- Hours: Mon-Sun 4:00 PM - 2:30 AM
+- Hours: Sun (1pm-11:30pm), Mon-Thu (3pm-11:30pm), Fri (3pm-2:30am), Sat (1pm-2:30am)
 
 **Website Information:**
 
