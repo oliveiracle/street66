@@ -2299,3 +2299,119 @@ body {
    Hide mobile social by default
    ================================================== */
 .footer-social-mobile { display: none; }
+
+/* ==================================================
+   MOBILE TOUCH-FRIENDLY OPTIMIZATIONS
+   Ensuring all interactive elements meet 44x44px minimum
+   ================================================== */
+@media (max-width: 768px) {
+     /* Minimum touch target size for all buttons */
+     .cta-button,
+     .event-button,
+     .world-card .button,
+     .map-btn,
+     .contact-form button {
+          min-height: 44px;
+          min-width: 44px;
+          padding: 12px 24px;
+          font-size: 1rem;
+     }
+     
+     /* Navigation links - ensure adequate spacing */
+     .main-nav a {
+          padding: 12px 16px;
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+     }
+     
+     /* Social media icons */
+     .footer-social a,
+     .social-icons a {
+          min-width: 44px;
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+     }
+     
+     /* WhatsApp button - already sized but ensure consistency */
+     .whatsapp-float {
+          width: 56px;
+          height: 56px;
+     }
+     
+     /* Opening hours call button */
+     .hours-call-btn {
+          min-height: 44px;
+          padding: 10px 20px;
+     }
+     
+     /* Gallery controls */
+     .gallery-prev,
+     .gallery-next {
+          min-width: 44px;
+          min-height: 44px;
+          padding: 12px;
+     }
+     
+     /* Form inputs - comfortable touch targets */
+     .contact-form input,
+     .contact-form textarea,
+     .contact-form select {
+          min-height: 44px;
+          padding: 12px;
+          font-size: 16px; /* Prevents iOS zoom on focus */
+     }
+     
+     .contact-form textarea {
+          min-height: 100px; /* Larger for multiline input */
+     }
+}
+
+/* ==================================================
+   IMAGE OPTIMIZATION & LAZY LOADING
+   ================================================== */
+img {
+     /* Enable browser-level lazy loading */
+     max-width: 100%;
+     height: auto;
+     display: block;
+}
+
+/* Optimize background images for mobile */
+@media (max-width: 768px) {
+     .hero,
+     .gallery-hero,
+     .contact-hero {
+          background-attachment: scroll; /* Better performance than fixed on mobile */
+          background-size: cover;
+          background-position: center;
+     }
+     
+     /* Reduce image quality/size for mobile cards */
+     .event-card-img,
+     .world-card img,
+     .gallery-slide img {
+          image-rendering: auto;
+          image-rendering: -webkit-optimize-contrast;
+     }
+}
+
+/* Placeholder for loading images */
+.lazy-loading {
+     background: linear-gradient(
+          90deg,
+          var(--background-dark) 0%,
+          rgba(139, 69, 19, 0.3) 50%,
+          var(--background-dark) 100%
+     );
+     background-size: 200% 100%;
+     animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+     0% { background-position: 200% 0; }
+     100% { background-position: -200% 0; }
+}
