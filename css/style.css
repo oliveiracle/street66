@@ -317,6 +317,9 @@ body {
      transform: translateY(-2px);
      box-shadow: 0 10px 20px rgba(156, 39, 176, 0.4);
 }
+
+/* Events Link Mobile Only - REMOVED */
+
 .button:hover {
      transform: translateY(-2px);
      box-shadow: 0 5px 15px rgba(204, 4, 59, 0.4);
@@ -2031,10 +2034,10 @@ body {
 @media (max-width: 768px) {
      .header-container { flex-direction: column; gap: 15px; padding: 20px 0; }
      .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
-     .hero h1 { font-size: 3rem; line-height: 1.1; }
-     .hero { padding: 200px 20px 40px; }
+     .hero h1 { font-size: 2rem; line-height: 1; }
+     .hero { padding: 60px 20px 40px; display: flex; flex-direction: column; }
      .cta-button { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
-     .hero-spotify-player { max-width: 300px; margin-top: 10px; }
+     .hero-spotify-player { max-width: 300px; margin-top: 20px; }
      .two-worlds h2, .next-events h2 { font-size: 2rem; font-family: var(--font-display); }
      .events-grid { grid-template-columns: 1fr; gap: 20px; }
      .event-card, .event-card-2, .event-card-3 {
@@ -2090,7 +2093,7 @@ body {
      .cta-button { padding: 10px 16px; font-size: 0.9rem; }
      .event-card h3 { font-size: 1.1em; font-family: var(--font-body); }
      .hero-spotify-player {
-          max-width: 98vw;
+          max-width: 58vw;
           padding: 4px 2px 2px 2px;
      }
 }
