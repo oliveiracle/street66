@@ -2037,7 +2037,7 @@ body {
      .hero h1 { font-size: 2rem; line-height: 1; }
      .hero { padding: 60px 20px 40px; display: flex; flex-direction: column; }
      .cta-button { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
-     .hero-spotify-player { max-width: 300px; margin-top: 20px; }
+     .hero-spotify-player { max-width: 300px; margin-top: 40px; }
      .two-worlds h2, .next-events h2 { font-size: 2rem; font-family: var(--font-display); }
      .events-grid { grid-template-columns: 1fr; gap: 20px; }
      .event-card, .event-card-2, .event-card-3 {
