@@ -44,6 +44,19 @@
             overflow: hidden;
         }
 
+        @media (max-width: 768px) {
+            .gallery-slider {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-slider {
+                padding: 0.5rem;
+            }
+        }
+
         /* Hide radio buttons */
         .gallery-slider input[type="radio"] {
             display: none;
@@ -56,6 +69,18 @@
             height: 400px;
             overflow: hidden;
             border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-slides {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-slides {
+                height: 200px;
+            }
         }
 
         /* Individual slides */
