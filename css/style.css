@@ -2003,11 +2003,26 @@ img[src*="cards/"] {
    ================================================== */
 @media (max-width: 900px) {
      .social-icons { display: none !important; }
+     
+     .footer-container {
+          display: flex;
+          flex-direction: column;
+     }
+     
      .footer-social-mobile {
           display: flex !important;
           justify-content: center;
           gap: 18px;
           margin-top: 18px;
+          order: 2;
+     }
+     
+     .footer-dev {
+          order: 3;
+     }
+     
+     .footer-info {
+          order: 1;
      }
                     .menu-hamburger {
                          display: flex;
