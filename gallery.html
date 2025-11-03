@@ -752,6 +752,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Close Button for Pet Photo Zoom -->
+        <div class="pet-photo-close-btn">&times;</div>
     </main>
 
     <!-- FOOTER (same as index/contact) -->
@@ -840,6 +843,7 @@
         // Pet Photo Expand/Collapse functionality
         document.addEventListener('DOMContentLoaded', () => {
             const petPhotos = document.querySelectorAll('.pet-photo img');
+            const closeBtn = document.querySelector('.pet-photo-close-btn');
             
             petPhotos.forEach(img => {
                 img.addEventListener('click', () => {
@@ -867,6 +871,16 @@
                         document.addEventListener('keydown', closeOnEsc);
                     }
                 });
+            });
+
+            // Close button functionality
+            closeBtn.addEventListener('click', () => {
+                const expandedImg = document.querySelector('.pet-photo img.expanded');
+                if (expandedImg) {
+                    expandedImg.classList.remove('expanded');
+                    document.body.classList.remove('pet-photo-expanded');
+                    document.body.style.overflow = '';
+                }
             });
         });
     </script>
