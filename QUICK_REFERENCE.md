@@ -218,7 +218,7 @@ https://cards-dev.twitter.com/validator
 **Bar Information:**
 
 - Name: Street 66 Bar
-- Address: 16-17 Parliament St, Temple Bar, Dublin 2
+- Address: 33-34 Parliament St, Temple Bar, Dublin 2
 - Contact: Email only (via contact form)
 - Instagram: @street66dublin
 - Hours: Sun (1pm-11:30pm), Mon-Thu (3pm-11:30pm), Fri (3pm-2:30am), Sat (1pm-2:30am)

@@ -4,7 +4,7 @@
 
 Complete transformation of Street 66 Bar website from "CLUB/NEON" aesthetic to "VINTAGE" aesthetic with comprehensive mobile-first optimizations.
 
-**Location:** 16-17 Parliament St, Temple Bar, Dublin 2, Ireland  
+**Location:** 33-34 Parliament St, Temple Bar, Dublin 2, Ireland  
 **Contact:** +353862727181 | @street66dublin  
 **Repository:** nightclub-website-template (oliveiracle/main)
 
@@ -129,7 +129,7 @@ Features:
 - Two action buttons:
   1. **"Open in Google Maps"** - Opens full Google Maps
   2. **"Get Directions"** - Direct navigation link
-- Address display: "16-17 Parliament St, Temple Bar, Dublin 2"
+- Address display: "33-34 Parliament St, Temple Bar, Dublin 2"
 - Vintage styling: Gold buttons with burgundy hover
 
 **CSS Styling:**
@@ -207,7 +207,7 @@ Animation: 1.5s infinite loading animation
   "name": "Street 66 Bar",
   "telephone": "+353862727181",
   "address": {
-    "streetAddress": "16-17 Parliament St, Temple Bar",
+    "streetAddress": "33-34 Parliament St, Temple Bar",
     "addressLocality": "Dublin",
     "postalCode": "Dublin 2",
     "addressCountry": "IE"
@@ -394,7 +394,7 @@ e540154 - Add font preconnect for improved loading performance
 ## Contact Information
 
 **Street 66 Bar**  
-16-17 Parliament St, Temple Bar  
+33-34 Parliament St, Temple Bar  
 Dublin 2, Ireland
 
 📱 Phone: +353862727181  
