@@ -3097,6 +3097,13 @@ body.pet-photo-expanded::before {
     font-family: var(--font-display);
 }
 
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -3162,6 +3169,11 @@ body.pet-photo-expanded::before {
         gap: 2rem;
         padding: 0 20px;
         margin: 2rem auto;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .contact-map-box iframe {
