@@ -224,7 +224,7 @@ body {
 .hero {
      text-align: center;
      padding: 150px 20px 100px;
-     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../assets/images/gallery/street66.jpg) center center/cover no-repeat;
+     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../assets/images/gallery/street662.jpg) center center/cover no-repeat;
      position: relative;
      overflow: hidden;
      display: flex;
@@ -248,12 +248,11 @@ body {
           -2px 2px 0px #000;
      margin-bottom: 30px;
      animation: neonGlow 2s ease-in-out infinite alternate;
-     cursor: pointer;
-     transition: all 0.4s ease;
-     position: relative;
-     z-index: 2;
+     /* Hide text but keep structure for spacing */
+     font-size: 0;
+     height: 0;
+     overflow: hidden;
 }
-
 .hero h1:hover {
      color: var(--accent-burgundy);
      text-shadow: 
@@ -2485,6 +2484,7 @@ img {
      .gallery-slide img {
           image-rendering: auto;
           image-rendering: -webkit-optimize-contrast;
+     }
 }
 
 /* ========================= 
