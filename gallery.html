@@ -844,42 +844,45 @@
         document.addEventListener('DOMContentLoaded', () => {
             const petPhotos = document.querySelectorAll('.pet-photo img');
             const closeBtn = document.querySelector('.pet-photo-close-btn');
+            let currentExpandedImg = null;
             
             petPhotos.forEach(img => {
-                img.addEventListener('click', () => {
-                    // Toggle expanded class
-                    img.classList.toggle('expanded');
-                    document.body.classList.toggle('pet-photo-expanded');
+                img.addEventListener('click', (e) => {
+                    e.stopPropagation();
                     
-                    // Prevent scrolling when expanded
-                    if (img.classList.contains('expanded')) {
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        document.body.style.overflow = '';
+                    // Close any previously expanded image
+                    if (currentExpandedImg && currentExpandedImg !== img) {
+                        currentExpandedImg.classList.remove('expanded');
+                        document.body.classList.remove('pet-photo-expanded');
                     }
+                    
+                    // Open the clicked image
+                    img.classList.add('expanded');
+                    document.body.classList.add('pet-photo-expanded');
+                    currentExpandedImg = img;
+                    document.body.style.overflow = 'hidden';
                     
                     // Close on ESC key
-                    if (img.classList.contains('expanded')) {
-                        const closeOnEsc = (e) => {
-                            if (e.key === 'Escape') {
-                                img.classList.remove('expanded');
-                                document.body.classList.remove('pet-photo-expanded');
-                                document.body.style.overflow = '';
-                                document.removeEventListener('keydown', closeOnEsc);
-                            }
-                        };
-                        document.addEventListener('keydown', closeOnEsc);
-                    }
+                    const closeOnEsc = (e) => {
+                        if (e.key === 'Escape') {
+                            img.classList.remove('expanded');
+                            document.body.classList.remove('pet-photo-expanded');
+                            document.body.style.overflow = '';
+                            currentExpandedImg = null;
+                            document.removeEventListener('keydown', closeOnEsc);
+                        }
+                    };
+                    document.addEventListener('keydown', closeOnEsc);
                 });
             });
 
             // Close button functionality
             closeBtn.addEventListener('click', () => {
-                const expandedImg = document.querySelector('.pet-photo img.expanded');
-                if (expandedImg) {
-                    expandedImg.classList.remove('expanded');
+                if (currentExpandedImg) {
+                    currentExpandedImg.classList.remove('expanded');
                     document.body.classList.remove('pet-photo-expanded');
                     document.body.style.overflow = '';
+                    currentExpandedImg = null;
                 }
             });
         });
