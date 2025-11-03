@@ -1750,6 +1750,14 @@ body {
      opacity: 0;
      z-index: 1;
 }
+
+/* Show the first slide by default if no radio is checked */
+.gallery-slides .slide1 {
+     display: flex;
+     opacity: 1;
+     position: relative;
+     z-index: 2;
+}
 .gallery-slide img {
      max-width: 90vw;
      max-height: 60vh;
