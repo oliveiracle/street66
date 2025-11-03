@@ -2700,3 +2700,531 @@ body.pet-photo-expanded::before {
      0% { background-position: 200% 0; }
      100% { background-position: -200% 0; }
 }
+/* =========================
+    GALLERY PAGE STYLES
+   ========================= */
+
+/* Gallery Section */
+.gallery-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    color: var(--vintage-gold);
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Main Carousel */
+.carousel-container {
+    position: relative;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(205, 127, 50, 0.05));
+    border: 3px solid var(--vintage-gold);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    aspect-ratio: 16 / 10;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+    align-items: center;
+}
+
+.carousel-btn {
+    background: rgba(212, 175, 55, 0.8);
+    color: var(--background-dark);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: var(--vintage-gold);
+    transform: scale(1.1);
+}
+
+.carousel-counter {
+    background: rgba(212, 175, 55, 0.9);
+    color: var(--background-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* Thumbnail Gallery */
+.thumbnail-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 8px;
+}
+
+.thumbnail {
+    aspect-ratio: 1;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: var(--vintage-gold);
+    transform: scale(1.05);
+}
+
+.thumbnail.active {
+    border-color: var(--vintage-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pet Gallery Section */
+.pet-gallery-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--vintage-bronze);
+}
+
+.pet-gallery-title {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    color: var(--vintage-bronze);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.pet-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pet-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(205, 127, 50, 0.1));
+    border: 2px solid var(--vintage-bronze);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+    aspect-ratio: 1;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    border-color: var(--vintage-gold);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid var(--vintage-gold);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--text-light);
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: rgba(212, 175, 55, 0.9);
+    border: 2px solid var(--vintage-gold);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.lightbox-close:hover {
+    background: var(--vintage-gold);
+    color: var(--background-dark);
+    transform: scale(1.1) rotate(90deg);
+}
+
+/* Gallery Page Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .carousel-container {
+        aspect-ratio: 16 / 12;
+    }
+
+    .thumbnail-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+
+    .pet-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .carousel-container {
+        aspect-ratio: 16 / 14;
+        border-width: 2px;
+    }
+
+    .thumbnail-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        padding: 1rem;
+    }
+
+    .pet-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-counter {
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .pet-gallery-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================
+    CONTACT PAGE STYLES
+   ========================= */
+
+.contact-hero {
+    background: linear-gradient(135deg, rgba(44, 24, 16, 0.95) 0%, rgba(74, 44, 32, 0.95) 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--vintage-gold);
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    font-family: var(--font-display);
+    color: var(--vintage-gold);
+    margin: 0;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.contact-hero p {
+    color: var(--vintage-cream);
+    font-size: 1.1rem;
+    margin: 15px 0 0 0;
+}
+
+.contact-main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-map-box {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 25px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.contact-map-box h2 {
+    color: var(--vintage-gold);
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    font-family: var(--font-display);
+}
+
+.contact-map-box iframe {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.info-label {
+    color: var(--vintage-gold);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.info-text {
+    color: var(--vintage-cream);
+    font-size: 1.1rem;
+}
+
+.info-text a {
+    color: var(--vintage-gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.info-text a:hover {
+    text-decoration: underline;
+}
+
+.contact-form-box {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 25px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.contact-form-box h2 {
+    color: var(--vintage-gold);
+    font-size: 1.5rem;
+    margin: 0 0 25px 0;
+    font-family: var(--font-display);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--vintage-gold);
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--vintage-cream);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--vintage-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--vintage-gold), var(--vintage-bronze));
+    color: var(--background-dark);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.5);
+}
+
+/* Contact Page Responsive */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+
+    .contact-map-box iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 40px 15px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-main {
+        padding: 0 15px;
+        margin: 2rem auto;
+    }
+
+    .contact-map-box,
+    .contact-form-box {
+        padding: 20px;
+    }
+
+    .contact-map-box h2,
+    .contact-form-box h2 {
+        font-size: 1.3rem;
+    }
+}

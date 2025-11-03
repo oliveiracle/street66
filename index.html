@@ -251,30 +251,6 @@
         </div>
     </div>
 
-    <script>
-        // Hours Modal functionality
-        const modal = document.getElementById('hours-modal');
-        const trigger = document.querySelector('.hours-trigger');
-        const closeBtn = document.querySelector('.hours-modal-close');
-
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    </script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
