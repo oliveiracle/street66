@@ -369,6 +369,27 @@
     </div>
 
     <script>
+        // Handle contact form submit - open email
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            
+            const name = encodeURIComponent(form.name.value);
+            const email = encodeURIComponent(form.email.value);
+            const phone = encodeURIComponent(form.phone.value);
+            const subject = encodeURIComponent(`[Street 66 Contact] ${form.subject.value}`);
+            const message = encodeURIComponent(
+                `Name: ${form.name.value}\n` +
+                `Email: ${form.email.value}\n` +
+                `Phone: ${form.phone.value}\n\n` +
+                `Message:\n${form.message.value}`
+            );
+            
+            // Open Gmail/email client
+            window.location.href = `mailto:streeti1@street66.ie?subject=${subject}&body=${message}`;
+            return false;
+        }
+
         // Hours Modal functionality
         const modal = document.getElementById('hours-modal');
         const trigger = document.querySelector('.hours-trigger');
