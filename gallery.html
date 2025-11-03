@@ -432,18 +432,46 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <h1>🏚️ STREET 66</h1>
+  <body>
+   <header class="main-header">
+    <div class="header-container">
+        <!-- Menu Sanduíche CSS Only -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu navegação" />
+        <div class="mobile-menu-overlay"></div>
+        <label for="menu-toggle" class="menu-hamburger" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="logo">
+            <div class="logo-img-container">
+                <img src="assets/images/branding/logo3.png" alt="Street 66 Bar Logo" class="header-vintage-logo">
+            </div>
+        </div>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="hours-trigger">Hours</a></li>
             </ul>
         </nav>
-    </header>
+
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@street66bar" target="_blank" rel="noopener">
+                <img src="assets/images/social/tw.png" alt="TikTok" class="social-icon-img">
+            </a>
+            <a href="https://www.instagram.com/street66dublin/?hl=en" target="_blank" rel="noopener">
+                <img src="assets/images/social/ig.png" alt="Instagram" class="social-icon-img">
+            </a>
+            <a href="https://www.facebook.com/street66Dublin/" target="_blank" rel="noopener">
+                <img src="assets/images/social/fb.png" alt="Facebook" class="social-icon-img">
+            </a>
+        </div>
+    </div>
+</header>
 
     <!-- Main Container -->
     <div class="container">
