@@ -3072,6 +3072,8 @@ body.pet-photo-expanded::before {
     border-radius: 12px;
     padding: 30px;
     border: 2px solid rgba(212, 175, 55, 0.3);
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .contact-form-box h2 {
@@ -3080,6 +3082,12 @@ body.pet-photo-expanded::before {
     margin: 0 0 25px 0;
     font-family: var(--font-display);
     text-align: center;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .info-text {
@@ -3116,10 +3124,15 @@ body.pet-photo-expanded::before {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .form-group {
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .form-group label {
@@ -3134,6 +3147,7 @@ body.pet-photo-expanded::before {
 .form-group textarea,
 .form-group select {
     width: 100%;
+    max-width: 100%;
     padding: 12px;
     border: 2px solid rgba(212, 175, 55, 0.3);
     border-radius: 6px;
@@ -3142,6 +3156,7 @@ body.pet-photo-expanded::before {
     font-family: inherit;
     font-size: 1rem;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -3220,15 +3235,19 @@ body.pet-photo-expanded::before {
 
 @media (max-width: 480px) {
     .contact-main {
-        padding: 0 15px;
+        padding: 0 10px;
         margin: 1.5rem auto;
         gap: 1.5rem;
     }
 
     .contact-map-box,
     .contact-form-box {
-        padding: 20px 15px;
+        padding: 18px 14px;
         border-radius: 10px;
+    }
+
+    .contact-form {
+        padding: 0;
     }
 
     .contact-map-box h2,
@@ -3242,8 +3261,13 @@ body.pet-photo-expanded::before {
         border-radius: 6px;
     }
 
+    .form-row {
+        gap: 10px;
+    }
+
     .form-group {
         margin-bottom: 12px;
+        min-width: 0;
     }
 
     .form-group label {
@@ -3254,9 +3278,11 @@ body.pet-photo-expanded::before {
     .form-group input,
     .form-group textarea,
     .form-group select {
-        padding: 10px;
+        padding: 10px 8px;
         font-size: 16px;
         border-radius: 5px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .form-group textarea {
