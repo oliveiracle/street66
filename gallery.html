@@ -3,87 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Gallery | Street 66 Bar Dublin - Vintage Bar Photos</title>
-    <meta name="title" content="Gallery | Street 66 Bar Dublin - Vintage Bar Photos">
-    <meta name="description" content="Explore the vintage atmosphere and unforgettable moments at Street 66 Bar in Temple Bar, Dublin. View photos of live music nights, cocktails, and our unique Andy Warhol-inspired interior.">
-    <meta name="keywords" content="Street 66 Bar gallery, Temple Bar photos, Dublin nightlife, vintage bar interior, live music Dublin, cocktail bar atmosphere">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://street66dublin.com/gallery.html">
-    <meta property="og:title" content="Gallery | Street 66 Bar Dublin">
-    <meta property="og:description" content="See the best moments and unique vintage atmosphere of Street 66 Bar in Temple Bar.">
-    <meta property="og:image" content="https://street66dublin.com/assets/images/gallery/481903827_1417680125869822_5391643869720132358_n (1).jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://street66dublin.com/gallery.html">
-    <meta property="twitter:title" content="Gallery | Street 66 Bar Dublin">
-    <meta property="twitter:description" content="See the best moments and unique vintage atmosphere of Street 66 Bar in Temple Bar.">
-    <meta property="twitter:image" content="https://street66dublin.com/assets/images/gallery/481903827_1417680125869822_5391643869720132358_n (1).jpg">
-    
+    <title>Gallery | Street 66 Bar Dublin</title>
+    <meta name="description" content="Street 66 Bar gallery - vintage photos and furry friends at Temple Bar, Dublin.">
     <link rel="icon" type="image/png" href="css/images/favicon.png">
-    <link rel="canonical" href="https://street66dublin.com/gallery.html">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Gallery System CSS - Original Working Version */
-        .gallery-slider-section {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .gallery-hero {
+            background: var(--background-dark);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--vintage-gold);
         }
-
-        .gallery-slider {
-            position: relative;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(234, 145, 227, 0.3);
-            overflow: hidden;
-        }
-
-        @media (max-width: 768px) {
-            .gallery-slider {
-                padding: 1rem;
-                border-radius: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-slider {
-                padding: 0.5rem;
-            }
-        }
-
-        /* Hide radio buttons */
-        .gallery-slider input[type="radio"] {
+        .gallery-hero h1 {
+            font-size: 3rem;
+            font-family: var(--font-display);
+            margin: 0;
+            text-shadow: 0 0 20px var(--vintage-gold);
             display: none;
         }
-
-        /* Slides container */
+        .gallery-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-section h2 {
+            text-align: center;
+            color: var(--vintage-gold);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-family: var(--font-display);
+            letter-spacing: 2px;
+        }
+        .gallery-container {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px solid var(--vintage-gold);
+        }
+        .gallery-slider-wrapper {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+        }
         .gallery-slides {
             position: relative;
             width: 100%;
-            height: 400px;
-            overflow: hidden;
-            border-radius: 10px;
+            height: 100%;
         }
-
-        @media (max-width: 768px) {
-            .gallery-slides {
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-slides {
-                height: 200px;
-            }
-        }
-
-        /* Individual slides */
         .gallery-slide {
             position: absolute;
             top: 0;
@@ -91,402 +60,216 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 1;
         }
-
+        .gallery-slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
         .gallery-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 10px;
+            display: block;
         }
-
-        /* Show active slides */
-        #slide1:checked ~ .gallery-slides .slide1,
-        #slide2:checked ~ .gallery-slides .slide2,
-        #slide3:checked ~ .gallery-slides .slide3,
-        #slide4:checked ~ .gallery-slides .slide4,
-        #slide5:checked ~ .gallery-slides .slide5,
-        #slide6:checked ~ .gallery-slides .slide6,
-        #slide7:checked ~ .gallery-slides .slide7,
-        #slide8:checked ~ .gallery-slides .slide8,
-        #slide9:checked ~ .gallery-slides .slide9,
-        #slide10:checked ~ .gallery-slides .slide10,
-        #slide11:checked ~ .gallery-slides .slide11,
-        #slide12:checked ~ .gallery-slides .slide12,
-        #slide13:checked ~ .gallery-slides .slide13,
-        #slide14:checked ~ .gallery-slides .slide14,
-        #slide15:checked ~ .gallery-slides .slide15 {
-            opacity: 1;
-        }
-
-        /* Navigation arrows */
-        .gallery-nav-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .gallery-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(234, 145, 227, 0.9);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 100;
-            pointer-events: all;
-            user-select: none;
-        }
-
-        .gallery-arrow:hover {
-            background: #EA91E3;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .gallery-arrow.prev {
-            left: 10px;
-        }
-
-        .gallery-arrow.next {
-            right: 10px;
-        }
-
-        /* Show correct navigation arrows based on active slide */
-        #slide1:checked ~ .gallery-nav-container label[for="slide15"].prev,
-        #slide1:checked ~ .gallery-nav-container label[for="slide2"].next,
-        #slide2:checked ~ .gallery-nav-container label[for="slide1"].prev,
-        #slide2:checked ~ .gallery-nav-container label[for="slide3"].next,
-        #slide3:checked ~ .gallery-nav-container label[for="slide2"].prev,
-        #slide3:checked ~ .gallery-nav-container label[for="slide4"].next,
-        #slide4:checked ~ .gallery-nav-container label[for="slide3"].prev,
-        #slide4:checked ~ .gallery-nav-container label[for="slide5"].next,
-        #slide5:checked ~ .gallery-nav-container label[for="slide4"].prev,
-        #slide5:checked ~ .gallery-nav-container label[for="slide6"].next,
-        #slide6:checked ~ .gallery-nav-container label[for="slide5"].prev,
-        #slide6:checked ~ .gallery-nav-container label[for="slide7"].next,
-        #slide7:checked ~ .gallery-nav-container label[for="slide6"].prev,
-        #slide7:checked ~ .gallery-nav-container label[for="slide8"].next,
-        #slide8:checked ~ .gallery-nav-container label[for="slide7"].prev,
-        #slide8:checked ~ .gallery-nav-container label[for="slide9"].next,
-        #slide9:checked ~ .gallery-nav-container label[for="slide8"].prev,
-        #slide9:checked ~ .gallery-nav-container label[for="slide10"].next,
-        #slide10:checked ~ .gallery-nav-container label[for="slide9"].prev,
-        #slide10:checked ~ .gallery-nav-container label[for="slide11"].next,
-        #slide11:checked ~ .gallery-nav-container label[for="slide10"].prev,
-        #slide11:checked ~ .gallery-nav-container label[for="slide12"].next,
-        #slide12:checked ~ .gallery-nav-container label[for="slide11"].prev,
-        #slide12:checked ~ .gallery-nav-container label[for="slide13"].next,
-        #slide13:checked ~ .gallery-nav-container label[for="slide12"].prev,
-        #slide13:checked ~ .gallery-nav-container label[for="slide14"].next,
-        #slide14:checked ~ .gallery-nav-container label[for="slide13"].prev,
-        #slide14:checked ~ .gallery-nav-container label[for="slide15"].next,
-        #slide15:checked ~ .gallery-nav-container label[for="slide14"].prev,
-        #slide15:checked ~ .gallery-nav-container label[for="slide1"].next {
-            display: flex !important;
-        }
-
-
-
-
-
-        /* Gallery controls and indicators */
-        .gallery-controls {
+        .gallery-nav {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 2rem;
-            gap: 1rem;
+            gap: 20px;
+            margin-top: 20px;
         }
-
-        .gallery-indicators {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+        .gallery-btn {
+            background: var(--vintage-gold);
+            color: var(--background-dark);
+            border: 2px solid var(--vintage-cream);
+            padding: 12px 24px;
+            border-radius: 5px;
             cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            display: block;
         }
-
-        .indicator:hover {
-            background: #FDF880;
-        }
-
-        /* Active indicator states */
-        #slide1:checked ~ .gallery-controls .gallery-indicators label:nth-child(1),
-        #slide2:checked ~ .gallery-controls .gallery-indicators label:nth-child(2),
-        #slide3:checked ~ .gallery-controls .gallery-indicators label:nth-child(3),
-        #slide4:checked ~ .gallery-controls .gallery-indicators label:nth-child(4),
-        #slide5:checked ~ .gallery-controls .gallery-indicators label:nth-child(5),
-        #slide6:checked ~ .gallery-controls .gallery-indicators label:nth-child(6),
-        #slide7:checked ~ .gallery-controls .gallery-indicators label:nth-child(7),
-        #slide8:checked ~ .gallery-controls .gallery-indicators label:nth-child(8),
-        #slide9:checked ~ .gallery-controls .gallery-indicators label:nth-child(9),
-        #slide10:checked ~ .gallery-controls .gallery-indicators label:nth-child(10),
-        #slide11:checked ~ .gallery-controls .gallery-indicators label:nth-child(11),
-        #slide12:checked ~ .gallery-controls .gallery-indicators label:nth-child(12),
-        #slide13:checked ~ .gallery-controls .gallery-indicators label:nth-child(13),
-        #slide14:checked ~ .gallery-controls .gallery-indicators label:nth-child(14),
-        #slide15:checked ~ .gallery-controls .gallery-indicators label:nth-child(15) {
-            background: #EA91E3;
-            transform: scale(1.3);
-        }
-
-        /* Thumbnail Grid */
-        .gallery-thumbnails {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 10px;
-            margin-top: 2rem;
-        }
-
-        .thumbnail {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            display: block;
-        }
-
-        .thumbnail:hover {
+        .gallery-btn:hover {
+            background: var(--vintage-cream);
             transform: scale(1.05);
-            border-color: #FDF880;
         }
-
-        .thumbnail img {
-            width: 100%;
-            height: 80px;
-            object-fit: cover;
-        }
-
-        /* Active thumbnail states */
-        #slide1:checked ~ .gallery-thumbnails label:nth-child(1),
-        #slide2:checked ~ .gallery-thumbnails label:nth-child(2),
-        #slide3:checked ~ .gallery-thumbnails label:nth-child(3),
-        #slide4:checked ~ .gallery-thumbnails label:nth-child(4),
-        #slide5:checked ~ .gallery-thumbnails label:nth-child(5),
-        #slide6:checked ~ .gallery-thumbnails label:nth-child(6),
-        #slide7:checked ~ .gallery-thumbnails label:nth-child(7),
-        #slide8:checked ~ .gallery-thumbnails label:nth-child(8),
-        #slide9:checked ~ .gallery-thumbnails label:nth-child(9),
-        #slide10:checked ~ .gallery-thumbnails label:nth-child(10),
-        #slide11:checked ~ .gallery-thumbnails label:nth-child(11),
-        #slide12:checked ~ .gallery-thumbnails label:nth-child(12),
-        #slide13:checked ~ .gallery-thumbnails label:nth-child(13),
-        #slide14:checked ~ .gallery-thumbnails label:nth-child(14),
-        #slide15:checked ~ .gallery-thumbnails label:nth-child(15) {
-            border-color: #EA91E3;
-            box-shadow: 0 0 20px rgba(234, 145, 227, 0.5);
-        }
-
-
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .gallery-main {
-                padding: 1rem;
-            }
-
-            .gallery-viewer {
-                height: 200px;
-            }
-
-            .gallery-controls {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .gallery-thumbnails {
-                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-                gap: 8px;
-            }
-
-            .thumbnail img {
-                height: 60px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-indicators {
-                justify-content: center;
-            }
-
-            .gallery-info {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
-        }
-
-        /* Animation Classes */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .slide-in-right {
-            transform: translateX(100px);
-            opacity: 0;
-            animation: slideInRight 0.5s ease forwards;
-        }
-
-        @keyframes slideInRight {
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .slide-in-left {
-            transform: translateX(-100px);
-            opacity: 0;
-            animation: slideInLeft 0.5s ease forwards;
-        }
-
-        @keyframes slideInLeft {
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        /* Galeria Pet-Friendly - Seção dos Cachorros */
-        .pet-gallery-section {
-            max-width: 1200px;
-            margin: 4rem auto 2rem;
-            padding: 0 1rem;
-        }
-
-        .pet-gallery-container {
-            background: rgba(24, 16, 40, 0.92);
-            border-radius: 18px;
-            padding: 3rem 2rem;
-            box-shadow: 0 0 30px rgba(253, 248, 128, 0.3);
+        .gallery-counter {
+            color: var(--vintage-gold);
+            font-weight: bold;
+            font-size: 1.1rem;
+            min-width: 80px;
             text-align: center;
+            font-family: var(--font-display);
         }
-
-        .pet-gallery-container h2 {
-            font-family: 'Bungee', cursive;
-            color: #d4af37;
-            font-size: 2.5rem;
-            text-shadow: 
-                0 0 10px rgba(212, 175, 55, 0.6),
-                0 0 20px rgba(212, 175, 55, 0.4);
-            margin-bottom: 1rem;
+        .pet-gallery-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        .pet-gallery-container p {
-            color: #fff;
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
+        .pet-gallery-section h2 {
+            text-align: center;
+            color: var(--vintage-gold);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-family: var(--font-display);
+            letter-spacing: 2px;
         }
-
+        .pet-gallery-intro {
+            text-align: center;
+            color: var(--vintage-gold);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
         .pet-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            justify-items: center;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
         }
-
         .pet-photo {
             position: relative;
-            border-radius: 12px;
+            aspect-ratio: 1;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            transition: all 0.4s ease;
-            border: 3px solid rgba(212, 175, 55, 0.4);
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid var(--vintage-gold);
+            background: #000;
+            transition: all 0.3s ease;
         }
-
         .pet-photo:hover {
-            transform: translateY(-8px) scale(1.03);
-            border-color: #d4af37;
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+            transform: scale(1.08);
+            box-shadow: 0 0 20px var(--vintage-gold);
         }
-
         .pet-photo img {
             width: 100%;
-            height: 280px;
+            height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
+            display: block;
         }
-
-        .pet-photo:hover img {
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.97);
+            z-index: 9999;
+            overflow: hidden;
+        }
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 95%;
+            max-height: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 10px;
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--vintage-gold);
+            border: 3px solid var(--vintage-cream);
+            border-radius: 50%;
+            color: var(--background-dark);
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 10000;
+            line-height: 1;
+            padding: 0;
+        }
+        .lightbox-close:hover {
+            background: var(--vintage-cream);
             transform: scale(1.1);
         }
-
-        /* Responsividade para galeria de pets */
         @media (max-width: 768px) {
-            .pet-gallery-container {
-                padding: 2rem 1.5rem;
-            }
-            
-            .pet-gallery-container h2 {
+            .gallery-hero h1 {
                 font-size: 2rem;
             }
-            
-            .pet-gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1rem;
+            .gallery-section h2,
+            .pet-gallery-section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
             }
-            
-            .pet-photo img {
-                height: 220px;
+            .gallery-slider-wrapper {
+                aspect-ratio: 4 / 3;
+            }
+            .gallery-nav {
+                gap: 15px;
+            }
+            .gallery-btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+            .pet-gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            .lightbox-img {
+                max-height: 75vh;
+            }
+            .lightbox-close {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+                top: 10px;
+                right: 10px;
             }
         }
-
         @media (max-width: 480px) {
-            .pet-gallery-container {
-                padding: 1.5rem 1rem;
+            .gallery-hero h1 {
+                font-size: 1.5rem;
             }
-            
-            .pet-gallery-container h2 {
-                font-size: 1.8rem;
+            .gallery-section h2,
+            .pet-gallery-section h2 {
+                font-size: 1.3rem;
             }
-            
             .pet-gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.8rem;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 12px;
             }
-            
-            .pet-photo img {
-                height: 180px;
+            .gallery-counter {
+                display: none;
+            }
+            .lightbox-close {
+                width: 45px;
+                height: 45px;
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
-<body class="gallery-bg">
-    <!-- HEADER (same as index/contact) -->
+<body>
     <header class="main-header">
         <div class="header-container">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open navigation menu" />
-            <label for="menu-toggle" class="menu-hamburger" tabindex="0">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Menu" />
+            <div class="mobile-menu-overlay"></div>
+            <label for="menu-toggle" class="menu-hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -499,10 +282,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="gallery.html" class="active-nav">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#" class="hours-trigger">Hours</a></li>
+                    <li><a href="#" class="hours-trigger">Hours 🕐</a></li>
                 </ul>
             </nav>
             <div class="social-icons">
@@ -521,280 +303,152 @@
 
     <main>
         <section class="gallery-hero">
-            <h1>🖼️ Gallery</h1>
-            <p>Experience the vibrant atmosphere of Street 66 Bar!</p>
+            <h1>Gallery</h1>
         </section>
 
-        <!-- Gallery System with Working Arrows -->
-        <section class="gallery-slider-section">
-            <div class="gallery-slider">
-                <!-- Radio button controls -->
-                <input type="radio" name="gallery" id="slide1" checked>
-                <input type="radio" name="gallery" id="slide2">
-                <input type="radio" name="gallery" id="slide3">
-                <input type="radio" name="gallery" id="slide4">
-                <input type="radio" name="gallery" id="slide5">
-                <input type="radio" name="gallery" id="slide6">
-                <input type="radio" name="gallery" id="slide7">
-                <input type="radio" name="gallery" id="slide8">
-                <input type="radio" name="gallery" id="slide9">
-                <input type="radio" name="gallery" id="slide10">
-                <input type="radio" name="gallery" id="slide11">
-                <input type="radio" name="gallery" id="slide12">
-                <input type="radio" name="gallery" id="slide13">
-                <input type="radio" name="gallery" id="slide14">
-                <input type="radio" name="gallery" id="slide15">
-
-                <!-- Gallery slides -->
-                <div class="gallery-slides">
-                    <div class="gallery-slide slide1">
-                        <img src="assets/images/gallery/481903827_1417680125869822_5391643869720132358_n (1).jpg" alt="Fun at Street 66 Bar 1" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide2">
-                        <img src="assets/images/gallery/482267965_1417680145869820_9211153481739201868_n.jpg" alt="Fun at Street 66 Bar 2" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide3">
-                    </div>
-                    <div class="gallery-slide slide5">
-                        <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n (2).jpg" alt="Fun at Street 66 Bar 5" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide6">
-                        <img src="assets/images/gallery/487462460_1437778667193301_8799167309488264491_n.jpg" alt="Fun at Street 66 Bar 6" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide7">
-                        <img src="assets/images/gallery/487792112_1438886590415842_1966670830959891633_n.jpg" alt="Fun at Street 66 Bar 7" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide8">
-                        <img src="assets/images/gallery/488017321_1437494747221693_1340412147082313578_n.jpg" alt="Fun at Street 66 Bar 8" loading="lazy">
-                    </div>
-        
-                    <div class="gallery-slide slide10">
-                        <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n.jpg" alt="Fun at Street 66 Bar 10" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide11">
-                        <img src="assets/images/gallery/488217405_1439705917000576_7242053845707404504_n.jpg" alt="Fun at Street 66 Bar 11" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide12">
-                        <img src="assets/images/gallery/488861292_1443178829986618_6472122392835636950_n.jpg" alt="Fun at Street 66 Bar 12" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide13">
-                        <img src="assets/images/gallery/488904812_1441028286868339_5242781180593017509_n.jpg" alt="Fun at Street 66 Bar 13" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide14">
-                        <img src="assets/images/gallery/489040095_1443554853282349_4191832262629036408_n.jpg" alt="Fun at Street 66 Bar 14" loading="lazy">
-                    </div>
-                    <div class="gallery-slide slide15">
-                        <img src="assets/images/gallery/499465855_3236083859864499_1979244406370271612_n.jpg" alt="Fun at Street 66 Bar 15" loading="lazy">
+        <section class="gallery-section">
+            <h2>Street 66 Moments</h2>
+            <div class="gallery-container">
+                <div class="gallery-slider-wrapper">
+                    <div class="gallery-slides">
+                        <div class="gallery-slide active">
+                            <img src="assets/images/gallery/481903827_1417680125869822_5391643869720132358_n (1).jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/482267965_1417680145869820_9211153481739201868_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/487462460_1437778667193301_8799167309488264491_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n (1).jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n (2).jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/487792112_1438886590415842_1966670830959891633_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/488017321_1437494747221693_1340412147082313578_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n (1).jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/488217405_1439705917000576_7242053845707404504_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/488861292_1443178829986618_6472122392835636950_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/488904812_1441028286868339_5242781180593017509_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/489040095_1443554853282349_4191832262629036408_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/499465855_3236083859864499_1979244406370271612_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/510034979_3236389493167269_8599373852009127202_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/511155614_3236525679820317_3948017536265246429_n.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/street66.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/street662.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="assets/images/gallery/teste.jpg" alt="Street 66 Bar" loading="lazy">
+                        </div>
                     </div>
                 </div>
-
-                <!-- Navigation arrows with proper labels -->
-                <div class="gallery-nav-container">
-                    <label for="slide15" class="gallery-arrow prev" title="Previous">❮</label>
-                    <label for="slide14" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide13" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide12" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide11" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide10" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide9" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide8" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide7" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide6" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide5" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide4" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide3" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide2" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    <label for="slide1" class="gallery-arrow prev" title="Previous" style="display:none;"></label>
-                    
-                    <label for="slide2" class="gallery-arrow next" title="Next">❯</label>
-                    <label for="slide3" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide4" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide5" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide6" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide7" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide8" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide9" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide10" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide11" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide12" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide13" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide14" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide15" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                    <label for="slide1" class="gallery-arrow next" title="Next" style="display:none;"></label>
-                </div>
-
-                <!-- Gallery indicators -->
-                <div class="gallery-controls">
-                    <div class="gallery-indicators">
-                        <label for="slide1" class="indicator"></label>
-                        <label for="slide2" class="indicator"></label>
-                        <label for="slide3" class="indicator"></label>
-                        <label for="slide4" class="indicator"></label>
-                        <label for="slide5" class="indicator"></label>
-                        <label for="slide6" class="indicator"></label>
-                        <label for="slide7" class="indicator"></label>
-                        <label for="slide8" class="indicator"></label>
-                        <label for="slide9" class="indicator"></label>
-                        <label for="slide10" class="indicator"></label>
-                        <label for="slide11" class="indicator"></label>
-                        <label for="slide12" class="indicator"></label>
-                        <label for="slide13" class="indicator"></label>
-                        <label for="slide14" class="indicator"></label>
-                        <label for="slide15" class="indicator"></label>
-                    </div>
+                <div class="gallery-nav">
+                    <button class="gallery-btn" id="prevBtn">← Previous</button>
+                    <span class="gallery-counter"><span id="currentSlide">1</span> / <span id="totalSlides">20</span></span>
+                    <button class="gallery-btn" id="nextBtn">Next →</button>
                 </div>
             </div>
+        </section>
 
-        <!-- Thumbnail Grid -->
-        <div class="gallery-thumbnails">
-            <label for="slide1" class="thumbnail">
-                <img src="assets/images/gallery/481903827_1417680125869822_5391643869720132358_n (1).jpg" alt="Street 66 Moment 1" loading="lazy">
-            </label>
-            <label for="slide2" class="thumbnail">
-                <img src="assets/images/gallery/482267965_1417680145869820_9211153481739201868_n.jpg" alt="Street 66 Moment 2" loading="lazy">
-            </label>
-            <label for="slide3" class="thumbnail">
-                <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n (1).jpg" alt="Street 66 Moment 3" loading="lazy">
-            </label>
-            <label for="slide4" class="thumbnail">
-                <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n.jpg" alt="Street 66 Moment 4" loading="lazy">
-            </label>
-            <label for="slide5" class="thumbnail">
-                <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n (2).jpg" alt="Street 66 Moment 5" loading="lazy">
-            </label>
-            <label for="slide6" class="thumbnail">
-                <img src="assets/images/gallery/487462460_1437778667193301_8799167309488264491_n.jpg" alt="Street 66 Moment 6" loading="lazy">
-            </label>
-            <label for="slide7" class="thumbnail">
-                <img src="assets/images/gallery/487792112_1438886590415842_1966670830959891633_n.jpg" alt="Street 66 Moment 7" loading="lazy">
-            </label>
-            <label for="slide8" class="thumbnail">
-                <img src="assets/images/gallery/488017321_1437494747221693_1340412147082313578_n.jpg" alt="Street 66 Moment 8" loading="lazy">
-            </label>
-            <label for="slide9" class="thumbnail">
-                <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n (1).jpg" alt="Street 66 Moment 9" loading="lazy">
-            </label>
-            <label for="slide10" class="thumbnail">
-                <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n.jpg" alt="Street 66 Moment 10" loading="lazy">
-            </label>
-            <label for="slide11" class="thumbnail">
-                <img src="assets/images/gallery/488217405_1439705917000576_7242053845707404504_n.jpg" alt="Street 66 Moment 11" loading="lazy">
-            </label>
-            <label for="slide12" class="thumbnail">
-                <img src="assets/images/gallery/488861292_1443178829986618_6472122392835636950_n.jpg" alt="Street 66 Moment 12" loading="lazy">
-            </label>
-            <label for="slide13" class="thumbnail">
-                <img src="assets/images/gallery/488904812_1441028286868339_5242781180593017509_n.jpg" alt="Street 66 Moment 13" loading="lazy">
-            </label>
-            <label for="slide14" class="thumbnail">
-                <img src="assets/images/gallery/489040095_1443554853282349_4191832262629036408_n.jpg" alt="Street 66 Moment 14" loading="lazy">
-            </label>
-            <label for="slide15" class="thumbnail">
-                <img src="assets/images/gallery/499465855_3236083859864499_1979244406370271612_n.jpg" alt="Street 66 Moment 15" loading="lazy">
-            </label>
-        </div>
-        </section>  
-
-        <!-- Seção Pet-Friendly - Nossos Amigos Peludos -->
         <section class="pet-gallery-section" id="pet-gallery">
-            <div class="pet-gallery-container">
-                <h2>🐾 Our Furry Friends</h2>
-                <p>Street 66 is extremely pet-friendly - meet some of our four-legged visitors!</p>
-                
-                <div class="pet-gallery-grid">
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog1.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog2.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog3.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog4.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog5.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog6.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog7.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog8.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog9.jpg" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog10.png" alt="Furry friend at Street 66" loading="lazy">
+            <h2>🐾 Our Furry Friends</h2>
+            <p class="pet-gallery-intro">Street 66 is pet-friendly! Click any photo to enlarge.</p>
+            <div class="pet-gallery-grid">
+                <div class="pet-photo" data-img="assets/images/dogs/dog1.jpg">
+                    <img src="assets/images/dogs/dog1.jpg" alt="Furry friend" loading="lazy">
                 </div>
-                <div class="pet-photo">
-                        <img src="assets/images/dogs/dog11.png" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog12.png" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog13.png" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-               <div class="pet-photo">
-                        <img src="assets/images/dogs/dog14.png" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog15.png" alt="Furry friend at Street 66" loading="lazy">
-                    </div>
-                    <div class="pet-photo">
-                        <img src="assets/images/dogs/dog16.png" alt="Furry friend at Street 66" loading="lazy">
+                <div class="pet-photo" data-img="assets/images/dogs/dog2.jpg">
+                    <img src="assets/images/dogs/dog2.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog3.jpg">
+                    <img src="assets/images/dogs/dog3.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog4.jpg">
+                    <img src="assets/images/dogs/dog4.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog5.jpg">
+                    <img src="assets/images/dogs/dog5.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog6.jpg">
+                    <img src="assets/images/dogs/dog6.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog7.jpg">
+                    <img src="assets/images/dogs/dog7.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog8.jpg">
+                    <img src="assets/images/dogs/dog8.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog9.jpg">
+                    <img src="assets/images/dogs/dog9.jpg" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog10.png">
+                    <img src="assets/images/dogs/dog10.png" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog11.png">
+                    <img src="assets/images/dogs/dog11.png" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog12.png">
+                    <img src="assets/images/dogs/dog12.png" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog13.png">
+                    <img src="assets/images/dogs/dog13.png" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog14.png">
+                    <img src="assets/images/dogs/dog14.png" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog15.png">
+                    <img src="assets/images/dogs/dog15.png" alt="Furry friend" loading="lazy">
+                </div>
+                <div class="pet-photo" data-img="assets/images/dogs/dog16.png">
+                    <img src="assets/images/dogs/dog16.png" alt="Furry friend" loading="lazy">
                 </div>
             </div>
         </section>
-
-        <!-- Close Button for Pet Photo Zoom -->
-        <div class="pet-photo-close-btn">&times;</div>
     </main>
 
-    <!-- FOOTER (same as index/contact) -->
-     <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <p>&copy; 2025 Street 66 Bar. All rights reserved.</p>
-                <p>33-34 Parliament St, Temple Bar, Dublin, Ireland</p>
-            </div>
-            <!-- Desenvolvedor do site - Neon Box -->
-            <div class="footer-dev">
-                <div class="developer-credit">
-                    <span class="dev-text">Website developed by 
-                        <a href="https://www.instagram.com/oliveiraacle/?hl=en" target="_blank" rel="noopener" class="dev-link">@oliveiraacle</a>
-                        <span style="margin-left:8px;">WhatsApp: <a href="https://wa.me/353862727181" target="_blank" rel="noopener" class="whatsapp-link">+353 086 272 71 81</a></span>
-                    </span>
-                </div>
-            </div>
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightboxImg" class="lightbox-img" src="" alt="">
         </div>
-        <div class="footer-container">
-            <div class="footer-social-mobile">
-                <a href="https://www.tiktok.com/@street66bar" target="_blank" rel="noopener">
-                    <img src="assets/images/social/tw.png" alt="TikTok" class="social-icon-img">
-                </a>
-                <a href="https://www.instagram.com/street66dublin/?hl=en" target="_blank" rel="noopener">
-                    <img src="assets/images/social/ig.png" alt="Instagram" class="social-icon-img">
-                </a>
-                <a href="https://www.facebook.com/street66Dublin/" target="_blank" rel="noopener">
-                    <img src="assets/images/social/fb.png" alt="Facebook" class="social-icon-img">
-                </a>
-            </div>
-        </div>
-    </footer>
+        <div class="lightbox-close">&times;</div>
+    </div>
 
-    <!-- Opening Hours Modal -->
     <div id="hours-modal" class="hours-modal">
         <div class="hours-modal-content">
-            <button class="hours-modal-close">&times;</button>
+            <span class="hours-modal-close">&times;</span>
             <h2>Opening Hours</h2>
-            <div class="hours-list">
+            <div class="hours-grid">
                 <div class="hours-item">
                     <span class="day">Sunday</span>
                     <span class="time">1:00 PM - 11:30 PM</span>
@@ -816,19 +470,113 @@
         </div>
     </div>
 
-    <script>
-        // Hours Modal functionality
-        const modal = document.getElementById('hours-modal');
-        const trigger = document.querySelector('.hours-trigger');
-        const closeBtn = document.querySelector('.hours-modal-close');
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 Street 66 Bar. All rights reserved.</p>
+                <p>33-34 Parliament St, Temple Bar, Dublin, Ireland</p>
+            </div>
+            <div class="footer-dev">
+                <div class="developer-credit">
+                    <span class="dev-text">Website developed by 
+                        <a href="https://www.instagram.com/oliveiraacle/?hl=en" target="_blank" rel="noopener" class="dev-link">@oliveiraacle</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-social-mobile">
+                <a href="https://www.tiktok.com/@street66bar" target="_blank" rel="noopener">
+                    <img src="assets/images/social/tw.png" alt="TikTok" class="social-icon-img">
+                </a>
+                <a href="https://www.instagram.com/street66dublin/?hl=en" target="_blank" rel="noopener">
+                    <img src="assets/images/social/ig.png" alt="Instagram" class="social-icon-img">
+                </a>
+                <a href="https://www.facebook.com/street66Dublin/" target="_blank" rel="noopener">
+                    <img src="assets/images/social/fb.png" alt="Facebook" class="social-icon-img">
+                </a>
+            </div>
+        </div>
+    </footer>
 
-        trigger.addEventListener('click', (e) => {
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery-slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            document.getElementById('currentSlide').textContent = index + 1;
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        const petPhotos = document.querySelectorAll('.pet-photo');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.querySelector('.lightbox-close');
+        let lightboxOpen = false;
+
+        function openLightbox(imgSrc) {
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            lightboxOpen = true;
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            lightboxOpen = false;
+        }
+
+        petPhotos.forEach(photo => {
+            photo.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const imgSrc = photo.getAttribute('data-img');
+                openLightbox(imgSrc);
+            });
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeLightbox();
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxOpen) {
+                closeLightbox();
+            }
+        });
+
+        const modal = document.getElementById('hours-modal');
+        const modalTrigger = document.querySelector('.hours-trigger');
+        const modalClose = document.querySelector('.hours-modal-close');
+
+        modalTrigger.addEventListener('click', (e) => {
             e.preventDefault();
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
 
-        closeBtn.addEventListener('click', () => {
+        modalClose.addEventListener('click', () => {
             modal.classList.remove('active');
             document.body.style.overflow = '';
         });
@@ -839,54 +587,6 @@
                 document.body.style.overflow = '';
             }
         });
-
-        // Pet Photo Expand/Collapse functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const petPhotos = document.querySelectorAll('.pet-photo img');
-            const closeBtn = document.querySelector('.pet-photo-close-btn');
-            let currentExpandedImg = null;
-            
-            petPhotos.forEach(img => {
-                img.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    
-                    // Close any previously expanded image
-                    if (currentExpandedImg && currentExpandedImg !== img) {
-                        currentExpandedImg.classList.remove('expanded');
-                        document.body.classList.remove('pet-photo-expanded');
-                    }
-                    
-                    // Open the clicked image
-                    img.classList.add('expanded');
-                    document.body.classList.add('pet-photo-expanded');
-                    currentExpandedImg = img;
-                    document.body.style.overflow = 'hidden';
-                    
-                    // Close on ESC key
-                    const closeOnEsc = (e) => {
-                        if (e.key === 'Escape') {
-                            img.classList.remove('expanded');
-                            document.body.classList.remove('pet-photo-expanded');
-                            document.body.style.overflow = '';
-                            currentExpandedImg = null;
-                            document.removeEventListener('keydown', closeOnEsc);
-                        }
-                    };
-                    document.addEventListener('keydown', closeOnEsc);
-                });
-            });
-
-            // Close button functionality
-            closeBtn.addEventListener('click', () => {
-                if (currentExpandedImg) {
-                    currentExpandedImg.classList.remove('expanded');
-                    document.body.classList.remove('pet-photo-expanded');
-                    document.body.style.overflow = '';
-                    currentExpandedImg = null;
-                }
-            });
-        });
     </script>
-
 </body>
 </html>
