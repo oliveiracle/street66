@@ -2545,6 +2545,13 @@ img {
      object-fit: contain;
      border-radius: 10px;
      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+     transition: transform 0.3s ease;
+     cursor: zoom-in;
+}
+
+.lightbox-img.zoomed {
+     cursor: zoom-out;
+     transform: scale(1.8);
 }
 
 .lightbox-close {

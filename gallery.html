@@ -859,11 +859,23 @@
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
             img.src = allImages[currentImageIndex].src;
+            img.classList.remove('zoomed'); // Reset zoom
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
+            
+            // Add zoom toggle on image click
+            img.addEventListener('click', toggleZoom);
+        }
+
+        function toggleZoom(e) {
+            const img = document.getElementById('lightbox-img');
+            img.classList.toggle('zoomed');
         }
 
         function closeLightbox() {
+            const img = document.getElementById('lightbox-img');
+            img.removeEventListener('click', toggleZoom);
+            img.classList.remove('zoomed');
             document.getElementById('lightbox').classList.remove('active');
             document.body.style.overflow = '';
         }
