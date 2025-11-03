@@ -1316,106 +1316,150 @@ body {
 }
 
 /* =========================
-    FOOTER
+    FOOTER - PROFESSIONAL & CLEAN
    ========================= */
 .main-footer {
-     background: #181028;
-     border-top: 2px solid var(--vintage-brown);
-     box-shadow: 0 -2px 24px 0 var(--vintage-brown);
-     padding: 6px 0 4px 0;
+     background: linear-gradient(to bottom, rgba(44, 24, 16, 0.95), #1a1510);
+     border-top: 2px solid var(--vintage-bronze);
+     padding: 30px 20px;
      color: var(--text-light);
-     margin-top: 40px;
-     min-height: 36px;
+     margin-top: 60px;
 }
-.footer-container {
+
+.footer-wrapper {
      max-width: 1200px;
      margin: 0 auto;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     gap: 8px;
 }
-.footer-logo-img {
-     width: 72px !important;
-     height: 72px!important;
-     border-radius: 50%;
-     border: 2px solid var(--vintage-brown);
-     box-shadow: 0 0 10px var(--vintage-brown);
-     background: var(--background-dark);
-     object-fit: cover;
-     margin-bottom: 8px;
+
+.footer-content {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 30px;
+     align-items: start;
+     padding-bottom: 20px;
+     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
-.footer-social {
-     display: flex;
-     gap: 18px;
-     margin-bottom: 8px;
-}
+
 .footer-info {
-     text-align: center;
-     font-size: 1em;
-     color: var(--text-light);
-     opacity: 0.85;
+     text-align: left;
+     font-size: 0.95rem;
+     color: var(--vintage-cream);
 }
+
 .footer-info p {
-     margin: 2px 0;
+     margin: 6px 0;
+     line-height: 1.6;
      letter-spacing: 0.5px;
 }
 
-/* Footer Developer Credit - Neon Box Style */
+.footer-info p:first-child {
+     font-family: var(--font-display);
+     color: var(--vintage-gold);
+     font-weight: bold;
+     font-size: 1rem;
+}
+
+.footer-hours-compact {
+     text-align: center;
+     font-size: 0.9rem;
+     color: var(--vintage-cream);
+     line-height: 1.8;
+}
+
+.footer-hours-compact .hours-label {
+     font-family: var(--font-nav);
+     color: var(--vintage-gold);
+     font-weight: 600;
+     margin-right: 8px;
+}
+
+.footer-social {
+     display: flex;
+     gap: 20px;
+     justify-content: flex-end;
+     align-items: center;
+}
+
+.footer-social a {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: rgba(212, 175, 55, 0.1);
+     border: 1px solid var(--vintage-bronze);
+     transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+     background: rgba(212, 175, 55, 0.3);
+     border-color: var(--vintage-gold);
+     transform: translateY(-2px);
+}
+
+.footer-social img {
+     width: 20px;
+     height: 20px;
+     opacity: 0.8;
+     transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover img {
+     opacity: 1;
+}
+
 .footer-dev {
-    margin-top: 16px !important;
-    text-align: center !important;
-    display: flex;
-    justify-content: center;
+     text-align: center;
+     padding-top: 15px;
+     font-size: 0.85rem;
+     color: rgba(245, 245, 220, 0.7);
 }
 
-.developer-credit {
-    display: inline-block;
-    background: rgba(24, 16, 40, 0.95);
-    border: 2px solid #EA91E3;
-    border-radius: 12px;
-    padding: 12px 20px;
-    margin: 0 auto;
-    box-shadow: 
-        0 0 15px rgba(234, 145, 227, 0.4),
-        inset 0 0 15px rgba(234, 145, 227, 0.1);
-    animation: neonGlow 2s ease-in-out infinite alternate;
-    backdrop-filter: blur(10px);
-    position: relative;
-    overflow: hidden;
+.footer-dev .dev-text {
+     position: relative;
 }
 
-.developer-credit::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(253, 248, 128, 0.2), transparent);
-    animation: shimmer 3s infinite;
+.footer-dev .dev-link {
+     color: var(--vintage-gold);
+     text-decoration: none;
+     font-weight: 600;
+     transition: all 0.3s ease;
 }
 
-.developer-credit .dev-text {
-    color: #fff;
-    font-size: 0.95em;
-    font-weight: 500;
-    position: relative;
-    z-index: 2;
+.footer-dev .dev-link:hover {
+     color: var(--vintage-cream);
+     text-decoration: underline;
 }
 
-.developer-credit .dev-link {
-    color: #EA91E3;
-    text-decoration: none;
-    font-weight: 600;
-    text-shadow: 0 0 8px rgba(234, 145, 227, 0.6);
-    transition: all 0.3s ease;
-}
+/* Mobile Footer */
+@media (max-width: 768px) {
+     .main-footer {
+          padding: 25px 15px;
+          margin-top: 40px;
+     }
 
-.developer-credit .dev-link:hover {
-    color: #FDF880;
-    text-shadow: 0 0 12px rgba(253, 248, 128, 0.8);
-    transform: scale(1.05);
+     .footer-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+     }
+
+     .footer-info {
+          text-align: center;
+     }
+
+     .footer-hours-compact {
+          text-align: center;
+          font-size: 0.85rem;
+     }
+
+     .footer-social {
+          justify-content: center;
+     }
+
+     .footer-dev {
+          font-size: 0.8rem;
+     }
 }
 
 .developer-credit .whatsapp-link {
@@ -2138,50 +2182,6 @@ body {
           font-size: 0.98rem;
      }
 }
-
-/* ==================================================
-   OPENING HOURS IN FOOTER
-   ================================================== */
-.footer-hours {
-     text-align: center;
-     margin-top: 15px;
-     padding: 15px;
-     background: rgba(139, 69, 19, 0.3);
-     border-radius: 8px;
-     border: 1px solid var(--vintage-bronze);
-}
-
-.footer-hours .hours-title {
-     font-family: var(--font-display);
-     color: var(--vintage-gold);
-     font-size: 1.1rem;
-     font-weight: bold;
-     margin-bottom: 10px;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-}
-
-.footer-hours p {
-     font-family: var(--font-body);
-     color: var(--vintage-cream);
-     font-size: 0.9rem;
-     margin: 5px 0;
-     line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-     .footer-hours {
-          margin-top: 20px;
-          padding: 12px;
-     }
-     .footer-hours .hours-title {
-          font-size: 1rem;
-     }
-     .footer-hours p {
-          font-size: 0.85rem;
-     }
-}
-
 /* ==================================================
    WHATSAPP FLOATING BUTTON - REMOVED
    Contact only via email now
