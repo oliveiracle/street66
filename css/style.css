@@ -2726,9 +2726,10 @@ body.pet-photo-expanded::before {
     border: 3px solid var(--vintage-gold);
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
     aspect-ratio: 16 / 11;
     max-height: 500px;
+    max-width: 1200px;
 }
 
 .carousel-wrapper {
@@ -2756,7 +2757,7 @@ body.pet-photo-expanded::before {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     display: block;
 }
