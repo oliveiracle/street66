@@ -2032,7 +2032,9 @@ body {
      .header-container { flex-direction: column; gap: 15px; padding: 20px 0; }
      .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
      .hero h1 { font-size: 3rem; line-height: 1.1; }
-     .hero { padding: 130px 20px 90px; }
+     .hero { padding: 200px 20px 40px; }
+     .cta-button { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
+     .hero-spotify-player { max-width: 300px; margin-top: 10px; }
      .two-worlds h2, .next-events h2 { font-size: 2rem; font-family: var(--font-display); }
      .events-grid { grid-template-columns: 1fr; gap: 20px; }
      .event-card, .event-card-2, .event-card-3 {
