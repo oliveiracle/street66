@@ -2210,6 +2210,178 @@ body {
 .footer-social-mobile { display: none; }
 
 /* ==================================================
+   OPENING HOURS MODAL - MOBILE-FIRST
+   ================================================== */
+.hours-modal {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.85);
+     z-index: 10000;
+     align-items: center;
+     justify-content: center;
+     backdrop-filter: blur(5px);
+     opacity: 0;
+     transition: opacity 0.3s ease;
+}
+
+.hours-modal.active {
+     display: flex;
+     opacity: 1;
+}
+
+.hours-modal-content {
+     background: linear-gradient(135deg, rgba(44, 24, 16, 0.98), rgba(26, 21, 16, 0.98));
+     border: 2px solid var(--vintage-gold);
+     border-radius: 12px;
+     padding: 30px 25px;
+     max-width: 420px;
+     width: 90%;
+     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+     position: relative;
+     animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+     from {
+          transform: translateY(-30px);
+          opacity: 0;
+     }
+     to {
+          transform: translateY(0);
+          opacity: 1;
+     }
+}
+
+.hours-modal-content h2 {
+     font-family: var(--font-display);
+     color: var(--vintage-gold);
+     font-size: 1.8rem;
+     margin: 0 0 25px 0;
+     text-align: center;
+     letter-spacing: 1px;
+}
+
+.hours-modal-close {
+     position: absolute;
+     top: 15px;
+     right: 15px;
+     background: transparent;
+     border: none;
+     color: var(--vintage-gold);
+     font-size: 2rem;
+     cursor: pointer;
+     width: 40px;
+     height: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.3s ease;
+     border-radius: 50%;
+}
+
+.hours-modal-close:hover {
+     background: rgba(212, 175, 55, 0.2);
+     transform: rotate(90deg);
+}
+
+.hours-list {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+
+.hours-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 12px 15px;
+     background: rgba(139, 69, 19, 0.2);
+     border-radius: 8px;
+     border-left: 3px solid var(--vintage-bronze);
+}
+
+.hours-item.highlight {
+     background: rgba(212, 175, 55, 0.15);
+     border-left-color: var(--vintage-gold);
+}
+
+.hours-item .day {
+     font-family: var(--font-nav);
+     color: var(--vintage-gold);
+     font-weight: 600;
+     font-size: 1rem;
+}
+
+.hours-item .time {
+     font-family: var(--font-body);
+     color: var(--vintage-cream);
+     font-size: 0.95rem;
+}
+
+.hours-note {
+     text-align: center;
+     color: var(--vintage-cream);
+     font-size: 0.9rem;
+     margin-top: 20px;
+     padding-top: 15px;
+     border-top: 1px solid rgba(212, 175, 55, 0.3);
+     font-family: var(--font-body);
+}
+
+/* Hours trigger link styling */
+.hours-trigger {
+     cursor: pointer;
+     position: relative;
+}
+
+.hours-trigger::after {
+     content: '🕐';
+     margin-left: 5px;
+     font-size: 0.9em;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+     .hours-modal-content {
+          padding: 25px 20px;
+          width: 95%;
+          max-width: 380px;
+     }
+
+     .hours-modal-content h2 {
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+     }
+
+     .hours-list {
+          gap: 12px;
+     }
+
+     .hours-item {
+          padding: 10px 12px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+     }
+
+     .hours-item .day {
+          font-size: 0.95rem;
+     }
+
+     .hours-item .time {
+          font-size: 0.9rem;
+     }
+
+     .hours-note {
+          font-size: 0.85rem;
+     }
+}
+
+/* ==================================================
    MOBILE TOUCH-FRIENDLY OPTIMIZATIONS
    Ensuring all interactive elements meet 44x44px minimum
    ================================================== */

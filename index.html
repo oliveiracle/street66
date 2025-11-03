@@ -124,6 +124,7 @@
                 <li><a href="events.html">Events</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="hours-trigger">Hours</a></li>
             </ul>
         </nav>
 
@@ -224,6 +225,58 @@
             </div>
         </div>
     </footer>
+
+    <!-- Opening Hours Modal -->
+    <div id="hours-modal" class="hours-modal">
+        <div class="hours-modal-content">
+            <button class="hours-modal-close">&times;</button>
+            <h2>Opening Hours</h2>
+            <div class="hours-list">
+                <div class="hours-item">
+                    <span class="day">Sunday</span>
+                    <span class="time">1:00 PM - 11:30 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span class="day">Monday - Thursday</span>
+                    <span class="time">3:00 PM - 11:30 PM</span>
+                </div>
+                <div class="hours-item highlight">
+                    <span class="day">Friday</span>
+                    <span class="time">3:00 PM - 2:30 AM</span>
+                </div>
+                <div class="hours-item highlight">
+                    <span class="day">Saturday</span>
+                    <span class="time">1:00 PM - 2:30 AM</span>
+                </div>
+            </div>
+            <p class="hours-note">📍 33-34 Parliament St, Temple Bar, Dublin 2</p>
+        </div>
+    </div>
+
+    <script>
+        // Hours Modal functionality
+        const modal = document.getElementById('hours-modal');
+        const trigger = document.querySelector('.hours-trigger');
+        const closeBtn = document.querySelector('.hours-modal-close');
+
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 
 </body>
 </html>
