@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Street 66 Bar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --vintage-gold: #d4af37;
+            --vintage-bronze: #cd7f32;
+            --vintage-cream: #f5f5dc;
+            --background-dark: #2c1810;
+            --text-light: #f5f5dc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(205, 127, 50, 0.1));
+            border-bottom: 2px solid var(--vintage-gold);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.8rem;
+            color: var(--vintage-gold);
+            letter-spacing: 3px;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        header a {
+            color: var(--text-light);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        header a:hover {
+            color: var(--vintage-gold);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            color: var(--vintage-gold);
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Main Carousel */
+        .carousel-container {
+            position: relative;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(205, 127, 50, 0.05));
+            border: 3px solid var(--vintage-gold);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            aspect-ratio: 16 / 10;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Carousel Controls */
+        .carousel-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 10;
+            align-items: center;
+        }
+
+        .carousel-btn {
+            background: rgba(212, 175, 55, 0.8);
+            color: var(--background-dark);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: var(--vintage-gold);
+            transform: scale(1.1);
+        }
+
+        .carousel-counter {
+            background: rgba(212, 175, 55, 0.9);
+            color: var(--background-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        /* Thumbnail Gallery */
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 8px;
+        }
+
+        .thumbnail {
+            aspect-ratio: 1;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .thumbnail:hover {
+            border-color: var(--vintage-gold);
+            transform: scale(1.05);
+        }
+
+        .thumbnail.active {
+            border-color: var(--vintage-gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Pet Gallery Section */
+        .pet-gallery-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--vintage-bronze);
+        }
+
+        .pet-gallery-title {
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            color: var(--vintage-bronze);
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .pet-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .pet-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(205, 127, 50, 0.1));
+            border: 2px solid var(--vintage-bronze);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            aspect-ratio: 1;
+        }
+
+        .pet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            border-color: var(--vintage-gold);
+        }
+
+        .pet-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            border: 3px solid var(--vintage-gold);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--vintage-gold);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .lightbox-close:hover {
+            color: var(--text-light);
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(205, 127, 50, 0.1));
+            border-top: 2px solid var(--vintage-gold);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--vintage-gold);
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--vintage-gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+
+            header ul {
+                gap: 1rem;
+            }
+
+            header a {
+                font-size: 0.75rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .carousel-container {
+                aspect-ratio: 16 / 12;
+            }
+
+            .thumbnail-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 10px;
+            }
+
+            .pet-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            header ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .carousel-container {
+                aspect-ratio: 16 / 14;
+                border-width: 2px;
+            }
+
+            .thumbnail-gallery {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+                padding: 1rem;
+            }
+
+            .pet-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+            }
+
+            .carousel-counter {
+                font-size: 0.85rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .pet-gallery-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>🏚️ STREET 66</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title">📸 Gallery</h2>
+
+            <!-- Main Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <div class="carousel-slide active">
+                        <img src="assets/images/gallery/481903827_1417680125869822_5391643869720132358_n_(1).jpg" alt="Gallery photo 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/482267965_1417680145869820_9211153481739201868_n.jpg" alt="Gallery photo 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/487462460_1437778667193301_8799167309488264491_n.jpg" alt="Gallery photo 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n_(1).jpg" alt="Gallery photo 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n_(2).jpg" alt="Gallery photo 5" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n.jpg" alt="Gallery photo 6" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/487792112_1438886590415842_1966670830959891633_n.jpg" alt="Gallery photo 7" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/488017321_1437494747221693_1340412147082313578_n.jpg" alt="Gallery photo 8" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n_(1).jpg" alt="Gallery photo 9" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n.jpg" alt="Gallery photo 10" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/488217405_1439705917000576_7242053845707404504_n.jpg" alt="Gallery photo 11" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/488861292_1443178829986618_6472122392835636950_n.jpg" alt="Gallery photo 12" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/488904812_1441028286868339_5242781180593017509_n.jpg" alt="Gallery photo 13" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/489040095_1443554853282349_4191832262629036408_n.jpg" alt="Gallery photo 14" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/499465855_3236083859864499_1979244406370271612_n.jpg" alt="Gallery photo 15" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/510034979_3236389493167269_8599373852009127202_n.jpg" alt="Gallery photo 16" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/511155614_3236525679820317_3948017536265246429_n.jpg" alt="Gallery photo 17" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/gallery/street66.jpg" alt="Gallery photo 18" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="previousSlide()">❮</button>
+                    <span class="carousel-counter"><span id="currentSlide">1</span> / 18</span>
+                    <button class="carousel-btn" onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="thumbnail-gallery">
+                <div class="thumbnail active" onclick="goToSlide(0)">
+                    <img src="assets/images/gallery/481903827_1417680125869822_5391643869720132358_n_(1).jpg" alt="Thumbnail 1" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(1)">
+                    <img src="assets/images/gallery/482267965_1417680145869820_9211153481739201868_n.jpg" alt="Thumbnail 2" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(2)">
+                    <img src="assets/images/gallery/487462460_1437778667193301_8799167309488264491_n.jpg" alt="Thumbnail 3" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(3)">
+                    <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n_(1).jpg" alt="Thumbnail 4" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(4)">
+                    <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n_(2).jpg" alt="Thumbnail 5" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(5)">
+                    <img src="assets/images/gallery/487484816_1438089820495519_6817807828236238954_n.jpg" alt="Thumbnail 6" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(6)">
+                    <img src="assets/images/gallery/487792112_1438886590415842_1966670830959891633_n.jpg" alt="Thumbnail 7" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(7)">
+                    <img src="assets/images/gallery/488017321_1437494747221693_1340412147082313578_n.jpg" alt="Thumbnail 8" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(8)">
+                    <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n_(1).jpg" alt="Thumbnail 9" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(9)">
+                    <img src="assets/images/gallery/488047280_1438802670424234_4686985465274011141_n.jpg" alt="Thumbnail 10" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(10)">
+                    <img src="assets/images/gallery/488217405_1439705917000576_7242053845707404504_n.jpg" alt="Thumbnail 11" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(11)">
+                    <img src="assets/images/gallery/488861292_1443178829986618_6472122392835636950_n.jpg" alt="Thumbnail 12" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(12)">
+                    <img src="assets/images/gallery/488904812_1441028286868339_5242781180593017509_n.jpg" alt="Thumbnail 13" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(13)">
+                    <img src="assets/images/gallery/489040095_1443554853282349_4191832262629036408_n.jpg" alt="Thumbnail 14" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(14)">
+                    <img src="assets/images/gallery/499465855_3236083859864499_1979244406370271612_n.jpg" alt="Thumbnail 15" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(15)">
+                    <img src="assets/images/gallery/510034979_3236389493167269_8599373852009127202_n.jpg" alt="Thumbnail 16" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(16)">
+                    <img src="assets/images/gallery/511155614_3236525679820317_3948017536265246429_n.jpg" alt="Thumbnail 17" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToSlide(17)">
+                    <img src="assets/images/gallery/street66.jpg" alt="Thumbnail 18" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Pet Gallery Section -->
+        <section class="pet-gallery-section">
+            <h3 class="pet-gallery-title">🐕 Our Furry Friends</h3>
+            <div class="pet-gallery" id="petGallery">
+                <!-- Pet cards will be generated here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <img id="lightboxImage" src="" alt="Pet photo">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Street 66 Bar. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="events.html">Events</a> | <a href="index.html">Home</a></p>
+        <p>📍 33-34 Parliament St, Temple Bar, Dublin 2</p>
+    </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+        const totalSlides = 18;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            if (n >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (n < 0) {
+                currentSlideIndex = totalSlides - 1;
+            } else {
+                currentSlideIndex = n;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+
+            slides[currentSlideIndex].classList.add('active');
+            thumbnails[currentSlideIndex].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlideIndex + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlideIndex - 1);
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Pet Gallery
+        const petPhotos = [
+            { path: 'assets/images/dogs/dog1.jpg', alt: 'Pet 1' },
+            { path: 'assets/images/dogs/dog2.jpg', alt: 'Pet 2' },
+            { path: 'assets/images/dogs/dog3.jpg', alt: 'Pet 3' },
+            { path: 'assets/images/dogs/dog4.jpg', alt: 'Pet 4' },
+            { path: 'assets/images/dogs/dog5.jpg', alt: 'Pet 5' },
+            { path: 'assets/images/dogs/dog6.jpg', alt: 'Pet 6' },
+            { path: 'assets/images/dogs/dog7.jpg', alt: 'Pet 7' },
+            { path: 'assets/images/dogs/dog8.jpg', alt: 'Pet 8' },
+            { path: 'assets/images/dogs/dog9.jpg', alt: 'Pet 9' },
+            { path: 'assets/images/dogs/dog10.jpg', alt: 'Pet 10' },
+            { path: 'assets/images/dogs/dog11.jpg', alt: 'Pet 11' },
+            { path: 'assets/images/dogs/dog12.jpg', alt: 'Pet 12' },
+            { path: 'assets/images/dogs/dog13.jpg', alt: 'Pet 13' },
+            { path: 'assets/images/dogs/dog14.jpg', alt: 'Pet 14' },
+            { path: 'assets/images/dogs/dog15.jpg', alt: 'Pet 15' },
+            { path: 'assets/images/dogs/dog16.jpg', alt: 'Pet 16' }
+        ];
+
+        function initPetGallery() {
+            const petGallery = document.getElementById('petGallery');
+            petPhotos.forEach((photo, index) => {
+                const petCard = document.createElement('div');
+                petCard.className = 'pet-card';
+                petCard.innerHTML = `<img src="${photo.path}" alt="${photo.alt}" loading="lazy" onclick="openLightbox('${photo.path}')">`;
+                petGallery.appendChild(petCard);
+            });
+        }
+
+        function openLightbox(imagePath) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = imagePath;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+
+        // Close lightbox on outside click
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        });
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            showSlide(0);
+            initPetGallery();
+        });
+
+        // Auto-advance carousel every 8 seconds
+        setInterval(() => {
+            nextSlide();
+        }, 8000);
+    </script>
+</body>
+</html>
