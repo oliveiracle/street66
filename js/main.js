@@ -51,14 +51,7 @@ const petPhotos = [
     { path: 'assets/images/dogs/dog6.jpg', alt: 'Pet 6' },
     { path: 'assets/images/dogs/dog7.jpg', alt: 'Pet 7' },
     { path: 'assets/images/dogs/dog8.jpg', alt: 'Pet 8' },
-    { path: 'assets/images/dogs/dog9.jpg', alt: 'Pet 9' },
-    { path: 'assets/images/dogs/dog10.jpg', alt: 'Pet 10' },
-    { path: 'assets/images/dogs/dog11.jpg', alt: 'Pet 11' },
-    { path: 'assets/images/dogs/dog12.jpg', alt: 'Pet 12' },
-    { path: 'assets/images/dogs/dog13.jpg', alt: 'Pet 13' },
-    { path: 'assets/images/dogs/dog14.jpg', alt: 'Pet 14' },
-    { path: 'assets/images/dogs/dog15.jpg', alt: 'Pet 15' },
-    { path: 'assets/images/dogs/dog16.jpg', alt: 'Pet 16' }
+    { path: 'assets/images/dogs/dog9.jpg', alt: 'Pet 9' }
 ];
 
 function initPetGallery() {
