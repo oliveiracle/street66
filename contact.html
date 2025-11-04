@@ -198,29 +198,6 @@
         }
     </script>
 
-    <!-- Location Welcome Modal -->
-    <div id="location-modal" class="location-modal">
-        <div class="location-modal-content">
-            <button class="location-modal-close" onclick="closeLocationModal()">&times;</button>
-            <div class="location-map-container">
-                <svg class="world-map" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Simplified World Map -->
-                    <path d="M 50 200 Q 150 180, 250 200 T 450 200 Q 550 220, 650 200 T 750 200" 
-                          stroke="#d4af37" stroke-width="2" fill="none" opacity="0.3"/>
-                    <circle class="bar-location" cx="400" cy="180" r="8" fill="#d4af37"/>
-                    <circle class="user-location" cx="400" cy="180" r="8" fill="#ff3333" id="userDot"/>
-                    <line class="connection-line" x1="400" y1="180" x2="400" y2="180" 
-                          stroke="#d4af37" stroke-width="1" stroke-dasharray="5,5" opacity="0.5" id="connectionLine"/>
-                </svg>
-            </div>
-            <div class="location-info">
-                <h2 id="locationTitle">🌍 Welcome!</h2>
-                <p id="locationText">Detecting your location...</p>
-                <p id="distanceText" class="distance-text"></p>
-            </div>
-        </div>
-    </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>
