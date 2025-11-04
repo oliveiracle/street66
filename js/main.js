@@ -41,45 +41,47 @@ function goToSlide(n) {
     showSlide(n);
 }
 
-// Pet Gallery
-const petPhotos = [
-    { path: 'assets/images/dogs/dog1.jpg', alt: 'Pet 1' },
-    { path: 'assets/images/dogs/dog2.jpg', alt: 'Pet 2' },
-    { path: 'assets/images/dogs/dog3.jpg', alt: 'Pet 3' },
-    { path: 'assets/images/dogs/dog4.jpg', alt: 'Pet 4' },
-    { path: 'assets/images/dogs/dog5.jpg', alt: 'Pet 5' },
-    { path: 'assets/images/dogs/dog6.jpg', alt: 'Pet 6' },
-    { path: 'assets/images/dogs/dog7.jpg', alt: 'Pet 7' },
-    { path: 'assets/images/dogs/dog8.jpg', alt: 'Pet 8' },
-    { path: 'assets/images/dogs/dog9.jpg', alt: 'Pet 9' }
-];
+// Pet Carousel
+let currentPetSlideIndex = 0;
+const totalPetSlides = 16;
 
-function initPetGallery() {
-    const petGallery = document.getElementById('petGallery');
-    if (!petGallery) return;
+function showPetSlide(n) {
+    const petWrapper = document.getElementById('petCarouselWrapper');
+    if (!petWrapper) return;
     
-    petPhotos.forEach((photo, index) => {
-        const petCard = document.createElement('div');
-        petCard.className = 'pet-card';
-        petCard.innerHTML = `<img src="${photo.path}" alt="${photo.alt}" loading="lazy" onclick="openLightbox('${photo.path}')">`;
-        petGallery.appendChild(petCard);
-    });
-}
+    const slides = petWrapper.querySelectorAll('.carousel-slide');
+    const thumbnails = document.querySelectorAll('.pet-gallery-section .thumbnail');
 
-function openLightbox(imagePath) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightboxImage');
-    if (lightbox && lightboxImage) {
-        lightboxImage.src = imagePath;
-        lightbox.classList.add('active');
+    if (n >= totalPetSlides) {
+        currentPetSlideIndex = 0;
+    } else if (n < 0) {
+        currentPetSlideIndex = totalPetSlides - 1;
+    } else {
+        currentPetSlideIndex = n;
+    }
+
+    slides.forEach(slide => slide.classList.remove('active'));
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+
+    slides[currentPetSlideIndex].classList.add('active');
+    thumbnails[currentPetSlideIndex].classList.add('active');
+    
+    const currentPetSlideElement = document.getElementById('currentPetSlide');
+    if (currentPetSlideElement) {
+        currentPetSlideElement.textContent = currentPetSlideIndex + 1;
     }
 }
 
-function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    if (lightbox) {
-        lightbox.classList.remove('active');
-    }
+function nextPetSlide() {
+    showPetSlide(currentPetSlideIndex + 1);
+}
+
+function previousPetSlide() {
+    showPetSlide(currentPetSlideIndex - 1);
+}
+
+function goToPetSlide(n) {
+    showPetSlide(n);
 }
 
 // =========================

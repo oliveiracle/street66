@@ -257,20 +257,122 @@
         </section>
 
         <!-- Pet Gallery Section -->
-        <section class="pet-gallery-section">
+        <section class="pet-gallery-section" id="pet-gallery">
             <h3 class="pet-gallery-title">🐕 Our Furry Friends</h3>
-            <div class="pet-gallery" id="petGallery">
-                <!-- Pet cards will be generated here -->
+            
+            <!-- Pet Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="petCarouselWrapper">
+                    <div class="carousel-slide active">
+                        <img src="assets/images/dogs/dog1.jpg" alt="Pet 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog2.jpg" alt="Pet 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog3.jpg" alt="Pet 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog4.jpg" alt="Pet 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog5.jpg" alt="Pet 5" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog6.jpg" alt="Pet 6" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog7.jpg" alt="Pet 7" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog8.jpg" alt="Pet 8" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog9.jpg" alt="Pet 9" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog10.jpg" alt="Pet 10" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog11.jpg" alt="Pet 11" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog12.jpg" alt="Pet 12" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog13.jpg" alt="Pet 13" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog14.jpg" alt="Pet 14" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog15.jpg" alt="Pet 15" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/dogs/dog16.jpg" alt="Pet 16" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="previousPetSlide()">❮</button>
+                    <span class="carousel-counter"><span id="currentPetSlide">1</span> / 16</span>
+                    <button class="carousel-btn" onclick="nextPetSlide()">❯</button>
+                </div>
+            </div>
+
+            <!-- Pet Thumbnails -->
+            <div class="thumbnail-gallery">
+                <div class="thumbnail active" onclick="goToPetSlide(0)">
+                    <img src="assets/images/dogs/dog1.jpg" alt="Pet 1" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(1)">
+                    <img src="assets/images/dogs/dog2.jpg" alt="Pet 2" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(2)">
+                    <img src="assets/images/dogs/dog3.jpg" alt="Pet 3" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(3)">
+                    <img src="assets/images/dogs/dog4.jpg" alt="Pet 4" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(4)">
+                    <img src="assets/images/dogs/dog5.jpg" alt="Pet 5" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(5)">
+                    <img src="assets/images/dogs/dog6.jpg" alt="Pet 6" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(6)">
+                    <img src="assets/images/dogs/dog7.jpg" alt="Pet 7" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(7)">
+                    <img src="assets/images/dogs/dog8.jpg" alt="Pet 8" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(8)">
+                    <img src="assets/images/dogs/dog9.jpg" alt="Pet 9" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(9)">
+                    <img src="assets/images/dogs/dog10.jpg" alt="Pet 10" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(10)">
+                    <img src="assets/images/dogs/dog11.jpg" alt="Pet 11" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(11)">
+                    <img src="assets/images/dogs/dog12.jpg" alt="Pet 12" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(12)">
+                    <img src="assets/images/dogs/dog13.jpg" alt="Pet 13" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(13)">
+                    <img src="assets/images/dogs/dog14.jpg" alt="Pet 14" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(14)">
+                    <img src="assets/images/dogs/dog15.jpg" alt="Pet 15" loading="lazy">
+                </div>
+                <div class="thumbnail" onclick="goToPetSlide(15)">
+                    <img src="assets/images/dogs/dog16.jpg" alt="Pet 16" loading="lazy">
+                </div>
             </div>
         </section>
-    </div>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()">×</button>
-            <img id="lightboxImage" src="" alt="Pet photo">
-        </div>
     </div>
 
      <footer class="main-footer">
