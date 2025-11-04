@@ -2449,6 +2449,8 @@ img[src*="cards/"] {
      }
      .cocktails-header {
           margin-bottom: 30px;
+          text-align: center;
+          padding: 0 15px;
      }
      .cocktails-header h2 {
           font-size: 1.7rem;
@@ -2461,7 +2463,9 @@ img[src*="cards/"] {
           flex-direction: row;
           max-width: 100%;
           gap: 10px;
-          padding: 0 5px;
+          padding: 0;
+          justify-content: center;
+          align-items: center;
      }
      .cocktails-carousel {
           width: calc(100vw - 140px);
@@ -2539,6 +2543,9 @@ img[src*="cards/"] {
      .cocktails-section {
           padding: 40px 8px;
      }
+     .cocktails-header {
+          padding: 0 10px;
+     }
      .cocktails-header h2 {
           font-size: 1.5rem;
      }
@@ -2599,6 +2606,9 @@ img[src*="cards/"] {
      .cocktails-section {
           padding: 35px 5px;
      }
+     .cocktails-header {
+          padding: 0 8px;
+     }
      .cocktails-header h2 {
           font-size: 1.4rem;
      }
@@ -2655,6 +2665,9 @@ img[src*="cards/"] {
      }
      
      /* Cocktails - 480px */
+     .cocktails-header {
+          padding: 0 5px;
+     }
      .cocktails-header h2 {
           font-size: 1.3rem;
      }
