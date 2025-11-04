@@ -1,154 +1,256 @@
-# 🎭 Street 66 Bar - Dublin's Vintage Nightlife Experience# Street 66 Bar - Website# street66-website
+# 🎭 Street 66 Bar - Official Website# 🎭 Street 66 Bar - Official Website
 
-[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)A fully responsive website for Street 66 Bar, a vintage bar in Temple Bar, Dublin.
+[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)## 🎯 Live Demo
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-**[View Live Site](https://oliveiracle.github.io/street66-bar)**
+> **A stunning vintage-themed website for Street 66 Bar, located in the heart of Temple Bar, Dublin.**> **A stunning vintage-themed website for Street 66 Bar, located in the heart of Temple Bar, Dublin. Experience the perfect blend of classic aesthetics and modern web design.**
 
-> **A stunning vintage-themed website for Street 66 Bar, located in the heart of Temple Bar, Dublin. Experience the perfect blend of classic aesthetics and modern web design.**
+## 🌟 Live Demo## 🌟 Live Demo
 
-## ✨ Features
-
----
-
-- **Interactive Photo Gallery** - Carousel with lightbox functionality
-
-## 🌟 Live Demo- **Events Page** - Dynamic event cards with descriptions
-
-- **Contact Form** - Integrated with Google Maps
-
-Visit the live site: **[https://oliveiracle.github.io/street66/](https://oliveiracle.github.io/street66/)**- **Pet Gallery** - Showcase of furry friends
-
-- **100% Responsive** - Works perfectly on mobile, tablet, and desktop
-
----- **Vintage Design** - Andy Warhol-inspired aesthetic
-
-## 📖 About Street 66 Bar## 🛠️ Technologies
-
-Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, offering:- **HTML5** - Semantic markup
-
-- 🎵 **Live Music** - Regular performances and DJ sets- **CSS3** - Gradients, animations, grid layouts, flexbox
-
-- 🍸 **Craft Cocktails** - Premium drinks in a vintage atmosphere- **Vanilla JavaScript** - No frameworks, pure JS
-
-- 🎨 **Andy Warhol Vibes** - Pop art aesthetics meet classic bar culture- **Google Maps API** - Location integration
-
-- 🐕 **Dog-Friendly** - Your furry friends are welcome!- **Responsive Design** - Mobile-first approach
-
-- 📍 **Perfect Location** - 33-34 Parliament St, Temple Bar, Dublin 2
-
-## 📁 Project Structure
+**[View Live Site →](https://oliveiracle.github.io/street66/)\*\***[View Live Site →](https://oliveiracle.github.io/street66/)\*\*
 
 ---
 
-```
+## 📖 About## 📖 About Street 66 Bar
 
-## 🎨 Design Featuresstreet66/
+Street 66 Bar is a unique establishment in Dublin's Temple Bar district, offering:Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, offering:
 
-├── index.html              # Home page
+- 🎵 **Live Music** - DJ Pixie-Woo every Friday & Saturday- 🎵 **Live Music** - DJ Pixie-Woo every Friday & Saturday
 
-### Vintage Aesthetic├── gallery.html            # Photo gallery with pets section
+- 🍸 **Signature Cocktails** - Crafted by expert mixologists- 🍸 **Signature Cocktails** - Crafted by expert mixologists
 
-- **Golden Color Palette** - Vintage gold (#d4af37), bronze (#cd7f32), and cream tones├── events.html             # Events & special nights
+- 🎨 **Vintage Atmosphere** - Classic bar vibes- 🎨 **Vintage Vibes** - Classic bar atmosphere
 
-- **Sepia Effects** - Subtle sepia filters on images for authentic vintage feel├── contact.html            # Contact form & location
+- 🐕 **Pet-Friendly** - Furry friends welcome!- 🐕 **Pet-Friendly** - Your furry friends are welcome!
 
-- **Neon Glow Effects** - CSS animations mimicking vintage neon signs├── css/
-
-- **Classic Typography** - Carefully selected fonts for retro atmosphere│   └── style.css          # Main stylesheet
-
-├── js/
-
-### Modern Functionality│   └── script.js          # JavaScript utilities
-
-- ✅ **Fully Responsive** - Optimized for all devices (desktop, tablet, mobile)└── assets/
-
-- ✅ **Performance Optimized** - Fast loading times and smooth animations    └── images/
-
-- ✅ **SEO Friendly** - Complete meta tags and structured data        ├── gallery/       # Bar photos (18 images)
-
-- ✅ **Accessibility** - ARIA labels and semantic HTML        ├── dogs/          # Pet photos (16 images)
-
-- ✅ **Cross-Browser Compatible** - Works on all modern browsers        ├── branding/      # Logo & branding
-
-        ├── social/        # Social media icons
-
----        └── backgrounds/   # Background images
-
-```
-
-## 🚀 Technologies Used
-
-## 🚀 How to Use
-
-| Technology | Purpose |
-
-|------------|---------|1. **Clone the repository:**
-
-| **HTML5** | Semantic markup and structure |
-
-| **CSS3** | Styling, animations, and responsive design | ```bash
-
-| **JavaScript (Vanilla)** | Interactive features and dynamic content | git clone https://github.com/oliveiracle/street66-bar.git
-
-| **Google Maps API** | Embedded location map | cd street66-bar
-
-| **Spotify Embed** | Live playlist integration | ```
-
-| **GitHub Pages** | Free hosting and deployment |
-
-2. **Open in browser:**
+- 📍 **Location** - 33-34 Parliament St, Temple Bar, Dublin 2- 📍 **Perfect Location** - 33-34 Parliament St, Temple Bar, Dublin 2
 
 ---
 
-- Simply open `index.html` in your web browser
+## ✨ Features## ✨ Features
 
-## 📱 Pages Overview - Or use a local server:
+- ✅ **Fully Responsive** - Mobile, tablet, desktop optimized- ✅ **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
 
-### 🏠 Home (`index.html`) ```bash
+- ✅ **Photo Gallery** - 31 bar photos with carousel navigation- ✅ **Performance Optimized** - WebP images, 89% size reduction
+
+- ✅ **Pet Gallery** - 16 furry friends with lightbox- ✅ **Interactive Gallery** - 31 bar photos with carousel navigation
+
+- ✅ **Cocktails Showcase** - 11 signature drinks carousel- ✅ **Pet Gallery** - Lightbox showcase of 16 furry friends
+
+- ✅ **Event Cards** - DJ schedule and special events- ✅ **Cocktails Carousel** - 11 signature drinks showcase
+
+- ✅ **Contact Page** - Google Maps integration- ✅ **Event Cards** - DJ Pixie-Woo and special events
+
+- ✅ **Performance** - WebP images (89% size reduction)- ✅ **Contact Page** - Integrated Google Maps
+
+- ✅ **SEO Optimized** - Schema.org structured data- ✅ **SEO Optimized** - Complete meta tags and Schema.org structured data
+
+- ✅ **Accessibility** - ARIA labels, semantic HTML- ✅ **Accessibility** - ARIA labels and semantic HTML
+
+- ✅ **Cross-Browser** - Works on all modern browsers
+
+---
+
+---
+
+## 🛠️ Tech Stack
+
+## 🛠️ Technologies
+
+- **HTML5** - Semantic markup
+
+- **CSS3** - Responsive design, animations| Technology | Purpose |
+
+- **Vanilla JavaScript** - Interactive features| ---------------------- | ---------------------------------------- |
+
+- **WebP** - Optimized images (6.3MB total)| **HTML5** | Semantic markup and structure |
+
+- **GitHub Pages** - Hosting| **CSS3** | Responsive design, animations, gradients |
+
+| **Vanilla JavaScript** | Interactive features (no frameworks) |
+
+---| **WebP** | Optimized image format |
+
+| **Google Maps API** | Embedded location map |
+
+## 📁 Structure| **GitHub Pages** | Hosting and deployment |
+
+````---
+
+street66/
+
+├── index.html              # Homepage## 📁 Project Structure
+
+├── gallery.html            # 31 bar photos + 16 pet photos
+
+├── contact.html            # Contact form + Google Maps```
+
+├── css/street66/
+
+│   └── style.css          # 3900+ lines of responsive CSS├── index.html              # Home page
+
+├── js/├── gallery.html            # Photo gallery with 31 bar photos + pets
+
+│   └── main.js            # Carousel, lightbox, interactions├── contact.html            # Contact form & location
+
+└── assets/├── css/
+
+    └── images/│   └── style.css          # Main stylesheet (3900+ lines)
+
+        ├── gallery_optimized/  # 36 WebP images├── js/
+
+        ├── backgrounds/cocktails/  # 11 cocktail photos│   └── main.js            # Gallery carousel, cocktails, lightbox
+
+        ├── dogs/               # 16 pet photos└── assets/
+
+        ├── branding/           # Logo    └── images/
+
+        ├── cards/              # Event thumbnails        ├── gallery_optimized/  # 36 WebP images (6.3MB)
+
+        └── social/             # Social media icons        ├── dogs/               # 16 pet photos
+
+```        ├── backgrounds/        # Hero & section backgrounds
+
+        │   └── cocktails/      # 11 cocktail photos
+
+---        ├── branding/           # Logo
+
+        ├── cards/              # Event cards (DJ Pixie-Woo, Pride)
+
+## 🚀 Quick Start        └── social/             # TikTok, Instagram, Facebook icons
+
+````
+
+`````bash
+
+# Clone repository---
+
+git clone https://github.com/oliveiracle/street66.git
+
+cd street66## 🚀 Quick Start
+
+
+
+# Open in browser (macOS)1. **Clone the repository:**
+
+open index.html
+
+````bash
+
+# Or use Live Server in VS Codegit clone https://github.com/oliveiracle/street66.git
+
+```cd street66
+
+
+
+---| **Spotify Embed** | Live playlist integration | ```
+
+
+
+## 📱 Responsive Breakpoints| **GitHub Pages** | Free hosting and deployment |
+
+
+
+- **Desktop:** 1025px+2. **Open in browser:**
+
+- **Tablet:** 769px - 1024px
+
+- **Mobile:** 320px - 768px---
+
+
+
+Optimized for:- Simply open `index.html` in your web browser
+
+- iPhone 5/SE (320px)
+
+- iPhone 6/7/8 (375px)## 📱 Pages Overview - Or use a local server:
+
+- iPad Mini (768px)
+
+- iPad Pro (1024px)### 🏠 Home (`index.html`) ```bash
+
+- Desktop (1200px+)
 
 - Hero section with animated text effects # Using Python 3
 
+---
+
 - Spotify playlist player python -m http.server 8000
+
+## 📞 Contact
 
 - "Our Two Worlds" showcase (Bar & Lounge)
 
-- Upcoming events carousel # Using Node.js (http-server)
+**Street 66 Bar**
 
-- Opening hours modal npx http-server
+- 📍 33-34 Parliament St, Temple Bar, Dublin 2- Upcoming events carousel # Using Node.js (http-server)
 
-  ```
+- 📞 +353 86 272 71 81
 
-  ```
+- 📧 streeti1@street66.ie- Opening hours modal npx http-server
+
+
+
+**Social Media:**````
+
+- [Instagram](https://www.instagram.com/street66dublin)
+
+- [TikTok](https://www.tiktok.com/@street66dublin)```
+
+- [Facebook](https://www.facebook.com/street66Dublin)
 
 ### 🖼️ Gallery (`gallery.html`)
 
-- Image carousel with 15 bar photos3. **Navigate the site:**
+**Opening Hours:**
 
-- Thumbnail navigation - **Home** - Main landing page
+- Sun: 1:00 PM - 11:30 PM- Image carousel with 15 bar photos3. **Navigate the site:**
+
+- Mon-Thu: 3:00 PM - 11:30 PM
+
+- Fri: 3:00 PM - 2:30 AM- Thumbnail navigation - **Home** - Main landing page
+
+- Sat: 1:00 PM - 2:30 AM
 
 - Pet-friendly gallery (9 dog photos) - **Gallery** - Photo gallery with interactive carousel
 
+---
+
 - Lightbox modal for full-screen viewing - **Events** - Upcoming events and special nights
+
+## 👨‍💻 Developer
 
 - Keyboard navigation support - **Contact** - Location, booking form, and directions
 
+**Developed by [@oliveiraacle](https://www.instagram.com/oliveiraacle/)**
+
 ### 📧 Contact (`contact.html`)## 📱 Responsive Breakpoints
+
+WhatsApp: +353 86 272 71 81
 
 - Interactive Google Maps integration
 
+---
+
 - Contact form with email functionality- **Desktop** - 1200px+
+
+## 📝 License
 
 - Review buttons (TripAdvisor & Google)- **Tablet** - 768px - 1199px
 
+© 2025 Street 66 Bar. All rights reserved.
+
 - Compact 2-column form layout- **Mobile** - Below 768px
 
+---
+
 - Fully responsive design
+
+**Last Updated:** November 4, 2025
 
 ## 🎨 Design Features
 
@@ -208,43 +310,43 @@ Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, 
 
 **Contact:**
 
-````
+`````
 
 street66/- Phone: +353 086 272 71 81
 
-├── index.html              # Homepage- WhatsApp: [Message us](https://wa.me/353862727181)
+├── index.html # Homepage- WhatsApp: [Message us](https://wa.me/353862727181)
 
-├── gallery.html            # Photo gallery- Email: streeti1@street66.ie
+├── gallery.html # Photo gallery- Email: streeti1@street66.ie
 
-├── contact.html            # Contact page
+├── contact.html # Contact page
 
 ├── assets/**Hours:**
 
-│   └── images/
+│ └── images/
 
-│       ├── backgrounds/    # Background images- Sunday: 1:00 PM - 11:30 PM
+│ ├── backgrounds/ # Background images- Sunday: 1:00 PM - 11:30 PM
 
-│       ├── branding/       # Logo and brand assets- Monday - Thursday: 3:00 PM - 11:30 PM
+│ ├── branding/ # Logo and brand assets- Monday - Thursday: 3:00 PM - 11:30 PM
 
-│       ├── cards/          # Event card images- Friday: 3:00 PM - 2:30 AM
+│ ├── cards/ # Event card images- Friday: 3:00 PM - 2:30 AM
 
-│       ├── dogs/           # Pet gallery photos- Saturday: 1:00 PM - 2:30 AM
+│ ├── dogs/ # Pet gallery photos- Saturday: 1:00 PM - 2:30 AM
 
-│       ├── gallery/        # Bar photo carousel
+│ ├── gallery/ # Bar photo carousel
 
-│       └── social/         # Social media icons## 🌐 Social Media
+│ └── social/ # Social media icons## 🌐 Social Media
 
 ├── css/
 
-│   └── style.css          # Main stylesheet (3400+ lines)- [Instagram](https://www.instagram.com/street66dublin)
+│ └── style.css # Main stylesheet (3400+ lines)- [Instagram](https://www.instagram.com/street66dublin)
 
 ├── js/- [TikTok](https://www.tiktok.com/@street66bar)
 
-│   └── main.js            # JavaScript functionality- [Facebook](https://www.facebook.com/street66Dublin)
+│ └── main.js # JavaScript functionality- [Facebook](https://www.facebook.com/street66Dublin)
 
-└── README.md              # This file
+└── README.md # This file
 
-```## 💻 Development
+````## 💻 Development
 
 
 

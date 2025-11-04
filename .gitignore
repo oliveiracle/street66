@@ -1,1 +1,21 @@
+# Local History (VS Code extension)
 .history/
+
+# macOS
+.DS_Store
+*/.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# IDE
+.vscode/settings.json
+.idea/
