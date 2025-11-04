@@ -3061,12 +3061,6 @@ img[src*="cards/"] {
      position: relative;
 }
 
-.hours-trigger::after {
-     content: '🕐';
-     margin-left: 5px;
-     font-size: 0.9em;
-}
-
 /* Mobile optimizations */
 @media (max-width: 768px) {
      .hours-modal-content {
