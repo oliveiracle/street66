@@ -15,10 +15,17 @@ MAX_WIDTH = 1200
 QUALITY = 85
 
 def optimize_image(input_path, output_path):
-    """Otimiza uma imagem: redimensiona e converte para WebP"""
+    """Otimiza uma imagem: redimensiona e converte para WebP preservando orientação EXIF"""
     try:
         # Abre a imagem
         img = Image.open(input_path)
+        
+        # IMPORTANTE: Corrige orientação EXIF (previne rotação indesejada)
+        try:
+            from PIL import ImageOps
+            img = ImageOps.exif_transpose(img)
+        except Exception:
+            pass  # Se falhar, continua sem correção
         
         # Converte RGBA para RGB se necessário
         if img.mode in ('RGBA', 'LA', 'P'):
@@ -34,8 +41,8 @@ def optimize_image(input_path, output_path):
             new_height = int(img.height * ratio)
             img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
         
-        # Salva como WebP com compressão
-        img.save(output_path, 'WEBP', quality=QUALITY, method=6)
+        # Salva como WebP com compressão (SEM preservar EXIF para evitar conflitos)
+        img.save(output_path, 'WEBP', quality=QUALITY, method=6, exif=b'')
         
         # Calcula redução de tamanho
         original_size = os.path.getsize(input_path) / 1024  # KB
