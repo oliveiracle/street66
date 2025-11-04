@@ -629,10 +629,12 @@ img[src*="cards/"] {
      margin-bottom: 40px;
 }
 .events-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-     gap: 30px;
-     max-width: 1200px;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 25px;
+     flex-wrap: wrap;
+     max-width: 1000px;
      margin: 0 auto;
      padding: 0 20px;
 }
@@ -640,13 +642,14 @@ img[src*="cards/"] {
      background: linear-gradient(135deg, rgba(44, 24, 16, 0.9), rgba(139, 69, 19, 0.8));
      border: 3px solid var(--vintage-bronze);
      border-radius: 20px;
-     padding: 25px;
+     padding: 22px 18px;
      transition: all 0.4s ease;
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: flex-start;
-     width: 100%;
+     width: 260px;
+     max-width: 260px;
      min-height: 380px;
      height: auto;
      box-shadow: 
@@ -2002,11 +2005,12 @@ img[src*="cards/"] {
           padding-right: 2vw;
      }
      .events-grid { 
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 25px;
+          gap: 20px;
      }
      .event-card {
-          min-height: 350px;
+          width: 250px;
+          max-width: 250px;
+          min-height: 360px;
      }
 }
 
@@ -2015,13 +2019,15 @@ img[src*="cards/"] {
    ================================================== */
 @media (max-width: 1024px) {
      .events-grid { 
-          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
           gap: 20px;
-          padding: 0 15px;
+          flex-direction: row;
+          justify-content: center;
      }
      .event-card {
-          min-height: 360px;
-          padding: 20px;
+          width: 240px;
+          max-width: 240px;
+          min-height: 370px;
+          padding: 20px 16px;
      }
      .event-card h3 {
           font-size: 1rem !important;
@@ -2034,11 +2040,12 @@ img[src*="cards/"] {
 @media (max-width: 900px) {
      .social-icons { display: none !important; }
      .events-grid {
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 20px;
+          gap: 18px;
      }
      .event-card {
-          min-height: 340px;
+          width: 230px;
+          max-width: 230px;
+          min-height: 350px;
      }
      
      .footer-container {
@@ -2200,14 +2207,16 @@ img[src*="cards/"] {
      .cta-button { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
      .two-worlds h2, .next-events h2 { font-size: 2rem; font-family: var(--font-display); }
      .events-grid { 
-          grid-template-columns: 1fr;
+          flex-direction: column;
+          align-items: center;
           gap: 20px;
           padding: 0 10px;
      }
      .event-card, .event-card-2, .event-card-3 {
           padding: 20px;
+          width: 100%;
+          max-width: 340px;
           min-height: 320px;
-          max-width: 100%;
           width: 98vw;
           max-width: 400px;
           margin-bottom: 18px;

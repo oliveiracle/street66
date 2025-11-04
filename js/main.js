@@ -4,7 +4,7 @@
 
 // Gallery Carousel
 let currentSlideIndex = 0;
-const totalSlides = 15;
+const totalSlides = 31;  // ATUALIZADO: 15 fotos antigas + 16 novas = 31 total
 
 function showSlide(n) {
     const slides = document.querySelectorAll('.carousel-slide');
