@@ -203,3 +203,102 @@ if (document.querySelector('.cocktails-carousel')) {
         nextCocktail();
     }, 5000);
 }
+
+// =========================
+// LOCATION WELCOME MODAL
+// =========================
+
+function closeLocationModal() {
+    const modal = document.getElementById('location-modal');
+    if (modal) {
+        modal.classList.remove('show');
+        localStorage.setItem('locationModalShown', 'true');
+    }
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Earth radius in km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+}
+
+function showLocationModal() {
+    // Only show once per session
+    if (localStorage.getItem('locationModalShown') === 'true') {
+        return;
+    }
+
+    const modal = document.getElementById('location-modal');
+    if (!modal) return;
+
+    modal.classList.add('show');
+
+    // Street 66 Bar location
+    const barLat = 53.3448;
+    const barLon = -6.2639;
+
+    // Try to get user location using IP geolocation API
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            const userLat = data.latitude;
+            const userLon = data.longitude;
+            const city = data.city;
+            const country = data.country_name;
+            const countryCode = data.country_code;
+            const flag = data.country_code ? getFlagEmoji(data.country_code) : '🌍';
+
+            // Calculate distance
+            const distance = calculateDistance(barLat, barLon, userLat, userLon);
+            const distanceText = distance < 1 ? 
+                `${Math.round(distance * 1000)} meters` : 
+                `${Math.round(distance).toLocaleString()} km`;
+
+            // Update modal content
+            document.getElementById('locationTitle').textContent = `${flag} Welcome from ${city}!`;
+            document.getElementById('locationText').textContent = `You're browsing from ${city}, ${country}`;
+            document.getElementById('distanceText').textContent = `📍 ${distanceText} away from Street 66`;
+
+            // Update SVG dot position (simplified - just animate it)
+            const userDot = document.getElementById('userDot');
+            const connectionLine = document.getElementById('connectionLine');
+            
+            // Random position for visual effect (since we can't accurately map to SVG coords)
+            const randomX = 100 + Math.random() * 600;
+            const randomY = 100 + Math.random() * 200;
+            
+            if (userDot) {
+                userDot.setAttribute('cx', randomX);
+                userDot.setAttribute('cy', randomY);
+            }
+            
+            if (connectionLine) {
+                connectionLine.setAttribute('x2', randomX);
+                connectionLine.setAttribute('y2', randomY);
+            }
+        })
+        .catch(error => {
+            console.log('Location detection failed:', error);
+            document.getElementById('locationTitle').textContent = '🌍 Welcome to Street 66!';
+            document.getElementById('locationText').textContent = 'Thanks for visiting our site!';
+            document.getElementById('distanceText').textContent = '📍 33-34 Parliament St, Temple Bar, Dublin';
+        });
+}
+
+function getFlagEmoji(countryCode) {
+    const codePoints = countryCode
+        .toUpperCase()
+        .split('')
+        .map(char => 127397 + char.charCodeAt());
+    return String.fromCodePoint(...codePoints);
+}
+
+// Show location modal on page load (all pages)
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(showLocationModal, 1500); // Show after 1.5 seconds
+});
