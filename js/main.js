@@ -149,3 +149,55 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Escape' && typeof closeLightbox === 'function') closeLightbox();
     });
 });
+
+// =========================
+// COCKTAILS CAROUSEL
+// =========================
+
+let currentCocktailIndex = 0;
+const totalCocktails = 11;
+
+function showCocktail(index) {
+    const slides = document.querySelectorAll('.cocktail-slide');
+    const indicators = document.querySelectorAll('.cocktail-indicator');
+    
+    if (!slides.length) return;
+    
+    // Loop around
+    if (index >= totalCocktails) {
+        currentCocktailIndex = 0;
+    } else if (index < 0) {
+        currentCocktailIndex = totalCocktails - 1;
+    } else {
+        currentCocktailIndex = index;
+    }
+    
+    // Update slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[currentCocktailIndex].classList.add('active');
+    
+    // Update indicators
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    if (indicators[currentCocktailIndex]) {
+        indicators[currentCocktailIndex].classList.add('active');
+    }
+}
+
+function nextCocktail() {
+    showCocktail(currentCocktailIndex + 1);
+}
+
+function prevCocktail() {
+    showCocktail(currentCocktailIndex - 1);
+}
+
+function gotoCocktail(index) {
+    showCocktail(index);
+}
+
+// Auto-advance cocktails carousel every 5 seconds
+if (document.querySelector('.cocktails-carousel')) {
+    setInterval(() => {
+        nextCocktail();
+    }, 5000);
+}
