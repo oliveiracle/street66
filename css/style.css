@@ -1156,14 +1156,17 @@ img[src*="cards/"] {
 }
 
 .cocktails-header h2 {
-     font-family: var(--font-display);
-     font-size: 3rem;
+     font-family: 'Dancing Script', 'Brush Script MT', cursive;
+     font-size: 4rem;
+     font-weight: 600;
      color: var(--vintage-gold);
      text-shadow: 
-          0 0 20px rgba(212, 175, 55, 0.5),
-          0 2px 4px rgba(0, 0, 0, 0.8);
+          0 0 25px rgba(212, 175, 55, 0.6),
+          0 0 40px rgba(212, 175, 55, 0.3),
+          0 2px 6px rgba(0, 0, 0, 0.9);
      margin-bottom: 15px;
-     letter-spacing: 2px;
+     letter-spacing: 1px;
+     font-style: italic;
 }
 
 .cocktails-subtitle {
