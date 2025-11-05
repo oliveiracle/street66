@@ -1,298 +1,594 @@
-# 🎭 Street 66 Bar - Official Website# 🎭 Street 66 Bar - Official Website
+# 🎭 Street 66 Bar - Official Website# 🎭 Street 66 Bar - Official Website# 🎭 Street 66 Bar - Official Website
 
-[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
+> **A stunning vintage-themed website for Street 66 Bar, located in the heart of Temple Bar, Dublin.**
+
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## 🌟 Live Demo
 
 > **A stunning vintage-themed website for Street 66 Bar, located in the heart of Temple Bar, Dublin.**> **A stunning vintage-themed website for Street 66 Bar, located in the heart of Temple Bar, Dublin. Experience the perfect blend of classic aesthetics and modern web design.**
 
+**[View Live Site →](https://oliveiracle.github.io/street66/)**
+
 ## 🌟 Live Demo## 🌟 Live Demo
+
+---
 
 **[View Live Site →](https://oliveiracle.github.io/street66/)\*\***[View Live Site →](https://oliveiracle.github.io/street66/)\*\*
 
+## 📖 About Street 66 Bar
+
 ---
+
+Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, offering:
 
 ## 📖 About## 📖 About Street 66 Bar
 
-Street 66 Bar is a unique establishment in Dublin's Temple Bar district, offering:Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, offering:
+- 🎵 **Live Music** - DJ Pixie-Woo every Friday & Saturday
 
-- 🎵 **Live Music** - DJ Pixie-Woo every Friday & Saturday- 🎵 **Live Music** - DJ Pixie-Woo every Friday & Saturday
+- 🍸 **Signature Cocktails** - Crafted by expert mixologistsStreet 66 Bar is a unique establishment in Dublin's Temple Bar district, offering:Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, offering:
+
+- 🎨 **Vintage Vibes** - Classic bar atmosphere with Andy Warhol inspiration
+
+- 🐕 **Pet-Friendly** - Your furry friends are welcome!- 🎵 **Live Music** - DJ Pixie-Woo every Friday & Saturday- 🎵 **Live Music** - DJ Pixie-Woo every Friday & Saturday
+
+- 📍 **Perfect Location** - 33-34 Parliament St, Temple Bar, Dublin 2
 
 - 🍸 **Signature Cocktails** - Crafted by expert mixologists- 🍸 **Signature Cocktails** - Crafted by expert mixologists
 
+---
+
 - 🎨 **Vintage Atmosphere** - Classic bar vibes- 🎨 **Vintage Vibes** - Classic bar atmosphere
+
+## ✨ Features
 
 - 🐕 **Pet-Friendly** - Furry friends welcome!- 🐕 **Pet-Friendly** - Your furry friends are welcome!
 
-- 📍 **Location** - 33-34 Parliament St, Temple Bar, Dublin 2- 📍 **Perfect Location** - 33-34 Parliament St, Temple Bar, Dublin 2
+- ✅ **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
 
----
+- ✅ **Performance Optimized** - WebP images with 89% size reduction- 📍 **Location** - 33-34 Parliament St, Temple Bar, Dublin 2- 📍 **Perfect Location** - 33-34 Parliament St, Temple Bar, Dublin 2
 
-## ✨ Features## ✨ Features
+- ✅ **Interactive Gallery** - 31 bar photos with carousel navigation
 
-- ✅ **Fully Responsive** - Mobile, tablet, desktop optimized- ✅ **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
+- ✅ **Pet Gallery** - Lightbox showcase of 16 furry friends---
 
-- ✅ **Photo Gallery** - 31 bar photos with carousel navigation- ✅ **Performance Optimized** - WebP images, 89% size reduction
+- ✅ **Cocktails Carousel** - 11 signature drinks with elegant presentation
 
-- ✅ **Pet Gallery** - 16 furry friends with lightbox- ✅ **Interactive Gallery** - 31 bar photos with carousel navigation
+- ✅ **Event Cards** - DJ Pixie-Woo schedule and special events## ✨ Features## ✨ Features
 
-- ✅ **Cocktails Showcase** - 11 signature drinks carousel- ✅ **Pet Gallery** - Lightbox showcase of 16 furry friends
+- ✅ **Contact Page** - Integrated Google Maps and booking form
 
-- ✅ **Event Cards** - DJ schedule and special events- ✅ **Cocktails Carousel** - 11 signature drinks showcase
+- ✅ **SEO Optimized** - Complete meta tags and Schema.org structured data- ✅ **Fully Responsive** - Mobile, tablet, desktop optimized- ✅ **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
 
-- ✅ **Contact Page** - Google Maps integration- ✅ **Event Cards** - DJ Pixie-Woo and special events
+- ✅ **Accessibility** - ARIA labels and semantic HTML
 
-- ✅ **Performance** - WebP images (89% size reduction)- ✅ **Contact Page** - Integrated Google Maps
+- ✅ **Google Analytics** - Full visitor tracking integration- ✅ **Photo Gallery** - 31 bar photos with carousel navigation- ✅ **Performance Optimized** - WebP images, 89% size reduction
 
-- ✅ **SEO Optimized** - Schema.org structured data- ✅ **SEO Optimized** - Complete meta tags and Schema.org structured data
 
-- ✅ **Accessibility** - ARIA labels, semantic HTML- ✅ **Accessibility** - ARIA labels and semantic HTML
 
-- ✅ **Cross-Browser** - Works on all modern browsers
+---- ✅ **Pet Gallery** - 16 furry friends with lightbox- ✅ **Interactive Gallery** - 31 bar photos with carousel navigation
 
----
 
----
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack- ✅ **Cocktails Showcase** - 11 signature drinks carousel- ✅ **Pet Gallery** - Lightbox showcase of 16 furry friends
 
-## 🛠️ Technologies
 
-- **HTML5** - Semantic markup
 
-- **CSS3** - Responsive design, animations| Technology | Purpose |
+| Technology | Purpose |- ✅ **Event Cards** - DJ schedule and special events- ✅ **Cocktails Carousel** - 11 signature drinks showcase
 
-- **Vanilla JavaScript** - Interactive features| ---------------------- | ---------------------------------------- |
+|------------|---------|
 
-- **WebP** - Optimized images (6.3MB total)| **HTML5** | Semantic markup and structure |
+| **HTML5** | Semantic markup and structure |- ✅ **Contact Page** - Google Maps integration- ✅ **Event Cards** - DJ Pixie-Woo and special events
 
-- **GitHub Pages** - Hosting| **CSS3** | Responsive design, animations, gradients |
+| **CSS3** | Responsive design, animations, gradients |
 
-| **Vanilla JavaScript** | Interactive features (no frameworks) |
+| **Vanilla JavaScript** | Interactive features (no frameworks) |- ✅ **Performance** - WebP images (89% size reduction)- ✅ **Contact Page** - Integrated Google Maps
 
----| **WebP** | Optimized image format |
+| **WebP** | Optimized image format (6.3MB total) |
 
-| **Google Maps API** | Embedded location map |
+| **Google Maps API** | Embedded location map |- ✅ **SEO Optimized** - Schema.org structured data- ✅ **SEO Optimized** - Complete meta tags and Schema.org structured data
 
-## 📁 Structure| **GitHub Pages** | Hosting and deployment |
+| **Spotify Embed** | Live playlist integration |
 
-````---
+| **GitHub Pages** | Hosting and deployment |- ✅ **Accessibility** - ARIA labels, semantic HTML- ✅ **Accessibility** - ARIA labels and semantic HTML
+
+
+
+---- ✅ **Cross-Browser** - Works on all modern browsers
+
+
+
+## 📁 Project Structure---
+
+
+
+```---
 
 street66/
 
-├── index.html              # Homepage## 📁 Project Structure
+├── index.html              # Home page with hero, events, cocktails## 🛠️ Tech Stack
 
-├── gallery.html            # 31 bar photos + 16 pet photos
+├── gallery.html            # Photo gallery (31 bar photos + 16 pets)
 
-├── contact.html            # Contact form + Google Maps```
+├── contact.html            # Contact form & location map## 🛠️ Technologies
 
-├── css/street66/
+├── css/
 
-│   └── style.css          # 3900+ lines of responsive CSS├── index.html              # Home page
+│   └── style.css          # Main stylesheet (3900+ lines)- **HTML5** - Semantic markup
 
-├── js/├── gallery.html            # Photo gallery with 31 bar photos + pets
+├── js/
+
+│   └── main.js            # Gallery carousel, modals, interactions- **CSS3** - Responsive design, animations| Technology | Purpose |
+
+└── assets/
+
+    └── images/- **Vanilla JavaScript** - Interactive features| ---------------------- | ---------------------------------------- |
+
+        ├── gallery_optimized/  # 36 WebP images (6.3MB)
+
+        ├── dogs/               # 16 pet photos- **WebP** - Optimized images (6.3MB total)| **HTML5** | Semantic markup and structure |
+
+        ├── backgrounds/        # Hero & section backgrounds
+
+        │   └── cocktails/      # 11 cocktail photos- **GitHub Pages** - Hosting| **CSS3** | Responsive design, animations, gradients |
+
+        ├── branding/           # Logo
+
+        ├── cards/              # Event cards (DJ Pixie-Woo, Pride)| **Vanilla JavaScript** | Interactive features (no frameworks) |
+
+        └── social/             # TikTok, Instagram, Facebook icons
+
+```---| **WebP** | Optimized image format |
+
+
+
+---| **Google Maps API** | Embedded location map |
+
+
+
+## 🚀 Quick Start## 📁 Structure| **GitHub Pages** | Hosting and deployment |
+
+
+
+1. **Clone the repository:**````---
+
+   ```bash
+
+   git clone https://github.com/oliveiracle/street66.gitstreet66/
+
+   cd street66
+
+   ```├── index.html              # Homepage## 📁 Project Structure
+
+
+
+2. **Open in browser:**├── gallery.html            # 31 bar photos + 16 pet photos
+
+   - Simply open `index.html` in your web browser
+
+   - Or use a local server:├── contact.html            # Contact form + Google Maps```
+
+   ```bash
+
+   # Using Python 3├── css/street66/
+
+   python -m http.server 8000
+
+   │   └── style.css          # 3900+ lines of responsive CSS├── index.html              # Home page
+
+   # Using Node.js (http-server)
+
+   npx http-server├── js/├── gallery.html            # Photo gallery with 31 bar photos + pets
+
+   ```
 
 │   └── main.js            # Carousel, lightbox, interactions├── contact.html            # Contact form & location
 
-└── assets/├── css/
+3. **Navigate the site:**
 
-    └── images/│   └── style.css          # Main stylesheet (3900+ lines)
+   - **Home** - Main landing page with hero banner└── assets/├── css/
 
-        ├── gallery_optimized/  # 36 WebP images├── js/
+   - **Gallery** - Interactive carousel and pet photos
 
-        ├── backgrounds/cocktails/  # 11 cocktail photos│   └── main.js            # Gallery carousel, cocktails, lightbox
-
-        ├── dogs/               # 16 pet photos└── assets/
-
-        ├── branding/           # Logo    └── images/
-
-        ├── cards/              # Event thumbnails        ├── gallery_optimized/  # 36 WebP images (6.3MB)
-
-        └── social/             # Social media icons        ├── dogs/               # 16 pet photos
-
-```        ├── backgrounds/        # Hero & section backgrounds
-
-        │   └── cocktails/      # 11 cocktail photos
-
----        ├── branding/           # Logo
-
-        ├── cards/              # Event cards (DJ Pixie-Woo, Pride)
-
-## 🚀 Quick Start        └── social/             # TikTok, Instagram, Facebook icons
-
-````
-
-`````bash
-
-# Clone repository---
-
-git clone https://github.com/oliveiracle/street66.git
-
-cd street66## 🚀 Quick Start
+   - **Contact** - Location, booking form, and directions    └── images/│   └── style.css          # Main stylesheet (3900+ lines)
 
 
 
-# Open in browser (macOS)1. **Clone the repository:**
-
-open index.html
-
-````bash
-
-# Or use Live Server in VS Codegit clone https://github.com/oliveiracle/street66.git
-
-```cd street66
+---        ├── gallery_optimized/  # 36 WebP images├── js/
 
 
 
----| **Spotify Embed** | Live playlist integration | ```
+## 📱 Pages Overview        ├── backgrounds/cocktails/  # 11 cocktail photos│   └── main.js            # Gallery carousel, cocktails, lightbox
 
 
 
-## 📱 Responsive Breakpoints| **GitHub Pages** | Free hosting and deployment |
+### 🏠 Home (`index.html`)        ├── dogs/               # 16 pet photos└── assets/
 
+- Hero section with street66.webp background
 
-
-- **Desktop:** 1025px+2. **Open in browser:**
-
-- **Tablet:** 769px - 1024px
-
-- **Mobile:** 320px - 768px---
-
-
-
-Optimized for:- Simply open `index.html` in your web browser
-
-- iPhone 5/SE (320px)
-
-- iPhone 6/7/8 (375px)## 📱 Pages Overview - Or use a local server:
-
-- iPad Mini (768px)
-
-- iPad Pro (1024px)### 🏠 Home (`index.html`) ```bash
-
-- Desktop (1200px+)
-
-- Hero section with animated text effects # Using Python 3
-
----
-
-- Spotify playlist player python -m http.server 8000
-
-## 📞 Contact
+- Spotify playlist player        ├── branding/           # Logo    └── images/
 
 - "Our Two Worlds" showcase (Bar & Lounge)
 
+- Signature cocktails carousel with elegant script font        ├── cards/              # Event thumbnails        ├── gallery_optimized/  # 36 WebP images (6.3MB)
+
+- Upcoming events (DJ Pixie-Woo, Pride Night)
+
+- Opening hours modal        └── social/             # Social media icons        ├── dogs/               # 16 pet photos
+
+
+
+### 🖼️ Gallery (`gallery.html`)```        ├── backgrounds/        # Hero & section backgrounds
+
+- Main carousel with 31 bar photos
+
+- Thumbnail navigation with smooth transitions        │   └── cocktails/      # 11 cocktail photos
+
+- Pet-friendly gallery (16 dog photos)
+
+- Lightbox modal for full-screen viewing---        ├── branding/           # Logo
+
+- Keyboard navigation support (arrows, ESC)
+
+        ├── cards/              # Event cards (DJ Pixie-Woo, Pride)
+
+### 📧 Contact (`contact.html`)
+
+- Interactive Google Maps integration## 🚀 Quick Start        └── social/             # TikTok, Instagram, Facebook icons
+
+- Contact form with email functionality
+
+- Review buttons (TripAdvisor & Google)````
+
+- Fully responsive 2-column layout
+
+`````bash
+
+---
+
+# Clone repository---
+
+## 📱 Responsive Breakpoints
+
+git clone https://github.com/oliveiracle/street66.git
+
+- **Desktop** - 1200px+
+
+- **Tablet** - 768px - 1199pxcd street66## 🚀 Quick Start
+
+- **Mobile** - Below 768px
+
+
+
+Optimized for:
+
+- iPhone 5/SE (320px)# Open in browser (macOS)1. **Clone the repository:**
+
+- iPhone 6/7/8 (375px)
+
+- iPad Mini (768px)open index.html
+
+- iPad Pro (1024px)
+
+- Desktop (1200px+)````bash
+
+
+
+---# Or use Live Server in VS Codegit clone https://github.com/oliveiracle/street66.git
+
+
+
+## 🎨 Design Features```cd street66
+
+
+
+### Color Scheme
+
+```css
+
+--vintage-gold: #d4af37;      /* Primary accent */---| **Spotify Embed** | Live playlist integration | ```
+
+--vintage-bronze: #cd7f32;    /* Secondary accent */
+
+--vintage-cream: #f5f5dc;     /* Light text */
+
+--background-dark: #2c1810;   /* Main background */
+
+--accent-burgundy: #8b2f39;   /* Highlights */## 📱 Responsive Breakpoints| **GitHub Pages** | Free hosting and deployment |
+
+```
+
+
+
+### Visual Effects
+
+- **Smooth Animations** - 0.3s transitions on interactive elements- **Desktop:** 1025px+2. **Open in browser:**
+
+- **Neon Glow Effects** - Text shadows on titles and headings
+
+- **Vintage Filters** - Sepia effects on hover- **Tablet:** 769px - 1024px
+
+- **Border Animations** - Pulsing gold borders on event cards
+
+- **Background Gradients** - Layered gradients with image overlays- **Mobile:** 320px - 768px---
+
+
+
+### Typography
+
+- **Hero Banner** - Bebas Neue (bold, uppercase)
+
+- **Cocktails Title** - Dancing Script (elegant cursive)Optimized for:- Simply open `index.html` in your web browser
+
+- **Body Text** - Oswald (clean, readable)
+
+- **Navigation** - Archivo Black (strong presence)- iPhone 5/SE (320px)
+
+
+
+---- iPhone 6/7/8 (375px)## 📱 Pages Overview - Or use a local server:
+
+
+
+## 📸 Gallery Features- iPad Mini (768px)
+
+
+
+The gallery includes:- iPad Pro (1024px)### 🏠 Home (`index.html`) ```bash
+
+- **31 bar photos** - Moments from Street 66 Bar
+
+- **16 pet photos** - Furry friends of the bar- Desktop (1200px+)
+
+- **Interactive carousel** - Navigate with arrows or thumbnails
+
+- **Lightbox viewer** - Click to enlarge photos- Hero section with animated text effects # Using Python 3
+
+- **Keyboard support** - Arrow keys and ESC
+
+- **Auto-advance** - 8-second intervals on main carousel---
+
+- **Active indicators** - Gold borders on current thumbnail
+
+- Spotify playlist player python -m http.server 8000
+
+---
+
+## 📞 Contact
+
+## 📞 Contact & Location
+
+- "Our Two Worlds" showcase (Bar & Lounge)
+
+**Address:** 33-34 Parliament St, Temple Bar, Dublin 2, Ireland
+
 **Street 66 Bar**
 
-- 📍 33-34 Parliament St, Temple Bar, Dublin 2- Upcoming events carousel # Using Node.js (http-server)
+**Contact:**
 
-- 📞 +353 86 272 71 81
+- Phone: +353 086 272 71 81- 📍 33-34 Parliament St, Temple Bar, Dublin 2- Upcoming events carousel # Using Node.js (http-server)
 
-- 📧 streeti1@street66.ie- Opening hours modal npx http-server
+- WhatsApp: [Message us](https://wa.me/353862727181)
+
+- Email: streeti1@street66.ie- 📞 +353 86 272 71 81
 
 
 
-**Social Media:**````
+**Hours:**- 📧 streeti1@street66.ie- Opening hours modal npx http-server
 
-- [Instagram](https://www.instagram.com/street66dublin)
+- Sunday: 1:00 PM - 11:30 PM
 
-- [TikTok](https://www.tiktok.com/@street66dublin)```
+- Monday - Thursday: 3:00 PM - 11:30 PM
 
-- [Facebook](https://www.facebook.com/street66Dublin)
+- Friday: 3:00 PM - 2:30 AM 🎉
 
-### 🖼️ Gallery (`gallery.html`)
+- Saturday: 1:00 PM - 2:30 AM 🎉**Social Media:**````
 
-**Opening Hours:**
 
-- Sun: 1:00 PM - 11:30 PM- Image carousel with 15 bar photos3. **Navigate the site:**
 
-- Mon-Thu: 3:00 PM - 11:30 PM
+---- [Instagram](https://www.instagram.com/street66dublin)
 
-- Fri: 3:00 PM - 2:30 AM- Thumbnail navigation - **Home** - Main landing page
 
-- Sat: 1:00 PM - 2:30 AM
 
-- Pet-friendly gallery (9 dog photos) - **Gallery** - Photo gallery with interactive carousel
+## 🌐 Social Media- [TikTok](https://www.tiktok.com/@street66dublin)```
+
+
+
+- [Instagram](https://www.instagram.com/street66dublin) - @street66dublin- [Facebook](https://www.facebook.com/street66Dublin)
+
+- [TikTok](https://www.tiktok.com/@street66dublin) - @street66dublin
+
+- [Facebook](https://www.facebook.com/street66Dublin) - Street 66 Bar### 🖼️ Gallery (`gallery.html`)
+
+
+
+---**Opening Hours:**
+
+
+
+## 💻 Browser Support- Sun: 1:00 PM - 11:30 PM- Image carousel with 15 bar photos3. **Navigate the site:**
+
+
+
+| Browser | Version | Status |- Mon-Thu: 3:00 PM - 11:30 PM
+
+|---------|---------|--------|
+
+| Chrome | Latest | ✅ Fully Supported |- Fri: 3:00 PM - 2:30 AM- Thumbnail navigation - **Home** - Main landing page
+
+| Firefox | Latest | ✅ Fully Supported |
+
+| Safari | Latest | ✅ Fully Supported |- Sat: 1:00 PM - 2:30 AM
+
+| Edge | Latest | ✅ Fully Supported |
+
+| Mobile Safari | iOS 12+ | ✅ Fully Supported |- Pet-friendly gallery (9 dog photos) - **Gallery** - Photo gallery with interactive carousel
+
+| Chrome Mobile | Latest | ✅ Fully Supported |
+
+---
 
 ---
 
 - Lightbox modal for full-screen viewing - **Events** - Upcoming events and special nights
 
+## 📈 Performance Metrics
+
 ## 👨‍💻 Developer
 
-- Keyboard navigation support - **Contact** - Location, booking form, and directions
+- ⚡ **Load Time**: < 2 seconds
 
-**Developed by [@oliveiraacle](https://www.instagram.com/oliveiraacle/)**
+- 📱 **Mobile-Friendly**: 100% responsive- Keyboard navigation support - **Contact** - Location, booking form, and directions
 
-### 📧 Contact (`contact.html`)## 📱 Responsive Breakpoints
+- 🎨 **CSS Animations**: Hardware-accelerated
+
+- 🖼️ **Image Optimization**: WebP format (89% size reduction)**Developed by [@oliveiraacle](https://www.instagram.com/oliveiraacle/)**
+
+- 📊 **Total Assets**: 6.3MB (optimized)
+
+- 🔍 **SEO**: Complete meta tags and structured data### 📧 Contact (`contact.html`)## 📱 Responsive Breakpoints
+
+- 📊 **Analytics**: Google Analytics (G-E0K0ZMD9E3)
 
 WhatsApp: +353 86 272 71 81
 
+---
+
 - Interactive Google Maps integration
 
+## 🚀 Deployment
+
 ---
+
+The site is deployed using **GitHub Pages**:
 
 - Contact form with email functionality- **Desktop** - 1200px+
 
-## 📝 License
+1. Push changes to `main` branch
+
+2. GitHub automatically deploys to: `https://oliveiracle.github.io/street66/`## 📝 License
+
+3. Changes are live within 1-2 minutes
 
 - Review buttons (TripAdvisor & Google)- **Tablet** - 768px - 1199px
 
+---
+
 © 2025 Street 66 Bar. All rights reserved.
+
+## 🎯 Recent Updates
 
 - Compact 2-column form layout- **Mobile** - Below 768px
 
----
+- ✅ Added street66.webp background to hero banner
 
-- Fully responsive design
+- ✅ Added street66.webp background to cocktails section---
 
-**Last Updated:** November 4, 2025
+- ✅ Upgraded cocktails title to elegant Dancing Script font
+
+- ✅ Removed decorative gold line for smoother transitions- Fully responsive design
+
+- ✅ Fixed pet gallery initialization bug
+
+- ✅ Removed unnecessary emoji decorations**Last Updated:** November 4, 2025
+
+- ✅ Integrated Google Analytics tracking
 
 ## 🎨 Design Features
 
 ---
 
+---
+
+## 👨‍💻 Developer
+
 - **Vintage Theme** - Gold (#d4af37), Bronze (#cd7f32), Cream (#f5f5dc)
+
+**Website developed by [@oliveiraacle](https://www.instagram.com/oliveiraacle/)**
 
 ## 🎯 Key Features- **Smooth Animations** - Hover effects and transitions
 
+WhatsApp: +353 086 272 71 81
+
 - **Interactive Elements** - Lightbox, modals, carousels
+
+---
 
 ### 🎪 Interactive Elements- **Accessible** - Semantic HTML, proper contrast ratios
 
+## 📝 License
+
 - **Photo Carousel** - Smooth transitions with keyboard controls
+
+© 2025 Street 66 Bar. All rights reserved.
 
 - **Hours Modal** - Pop-up with complete opening hours## 📸 Photo Gallery
 
+The code structure is available for educational purposes, but the branding, images, and content are proprietary to Street 66 Bar.
+
 - **Lightbox Gallery** - Click to enlarge pet photos
+
+---
 
 - **Mobile Menu** - Hamburger menu for small screensThe gallery features:
 
+## ⭐ Show Your Support
+
 - **Contact Form** - Direct email integration
+
+If you enjoyed visiting Street 66 Bar:
 
 - **18 bar photos** - Moments from Street 66 Bar
 
-### 🎨 Visual Effects- **16 pet photos** - Furry friends of the bar
+- ⭐ Star this repository
 
-- **Border Glow Animation** - Pulsing gold borders on event cards- **Interactive carousel** - Navigate with arrows or thumbnails
+- 📝 Leave a review on [TripAdvisor](https://www.tripadvisor.ie)### 🎨 Visual Effects- **16 pet photos** - Furry friends of the bar
+
+- 🌟 Rate us on [Google](https://www.google.com/search?q=Street+66+Reviews)
+
+- 📲 Follow us on social media- **Border Glow Animation** - Pulsing gold borders on event cards- **Interactive carousel** - Navigate with arrows or thumbnails
+
+- 🍻 Visit us in person!
 
 - **Sepia Filters** - Vintage photo effects on hover- **Lightbox viewer** - Click to enlarge photos
 
+---
+
 - **Smooth Transitions** - 0.3s ease on all interactive elements- **Keyboard support** - Use arrow keys and ESC
+
+<div align="center">
 
 - **Text Shadow Glow** - Neon-style text effects
 
+**Made with ❤️ and ☕ in Dublin, Ireland**
+
 - **Background Blur** - Modern glassmorphism effects## 🐾 Pet Gallery
+
+🎭 **Street 66 Bar** - Where Vintage Meets Modern
 
 ### 📱 Mobile OptimizationA dedicated section celebrating our four-legged visitors with:
 
+[Website](https://oliveiracle.github.io/street66/) • [Instagram](https://www.instagram.com/street66dublin/) • [Facebook](https://www.facebook.com/street66Dublin/) • [TikTok](https://www.tiktok.com/@street66dublin)
+
 - **Touch-Friendly** - Large tap targets and optimized spacing
 
+**Last Updated:** November 5, 2025
+
 - **No Zoom on Input** - 16px font size prevents iOS zoom- Grid layout that adapts to screen size
+
+</div>
 
 - **Stacked Layouts** - Single column on mobile devices- Hover animations
 
