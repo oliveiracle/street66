@@ -84,6 +84,14 @@ function goToPetSlide(n) {
     showPetSlide(n);
 }
 
+function initPetGallery() {
+    // Initialize pet carousel with first slide
+    const petWrapper = document.getElementById('petCarouselWrapper');
+    if (petWrapper) {
+        showPetSlide(0);
+    }
+}
+
 // =========================
 // HOME PAGE SCRIPTS
 // =========================
