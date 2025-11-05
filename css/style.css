@@ -365,19 +365,8 @@ img[src*="cards/"] {
 .two-worlds {
      padding: 120px 20px;
      max-width: 1200px;
-     margin: 60px auto;
+     margin: 0 auto;
      position: relative;
-}
-.two-worlds::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 80%;
-     height: 1px;
-     background: linear-gradient(90deg, transparent, var(--vintage-gold), transparent);
-     opacity: 0.5;
 }
 .two-worlds h2 {
      text-align: center;
