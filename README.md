@@ -1,7 +1,5 @@
 # 🎭 Street 66 Bar - Official Website# 🎭 Street 66 Bar - Official Website# 🎭 Street 66 Bar - Official Website
 
-
-
 [![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -76,15 +74,9 @@ Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, 
 
 - ✅ **Google Analytics** - Full visitor tracking integration- ✅ **Photo Gallery** - 31 bar photos with carousel navigation- ✅ **Performance Optimized** - WebP images, 89% size reduction
 
-
-
 ---- ✅ **Pet Gallery** - 16 furry friends with lightbox- ✅ **Interactive Gallery** - 31 bar photos with carousel navigation
 
-
-
 ## 🛠️ Tech Stack- ✅ **Cocktails Showcase** - 11 signature drinks carousel- ✅ **Pet Gallery** - Lightbox showcase of 16 furry friends
-
-
 
 | Technology | Purpose |- ✅ **Event Cards** - DJ schedule and special events- ✅ **Cocktails Carousel** - 11 signature drinks showcase
 
@@ -104,17 +96,11 @@ Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, 
 
 | **GitHub Pages** | Hosting and deployment |- ✅ **Accessibility** - ARIA labels, semantic HTML- ✅ **Accessibility** - ARIA labels and semantic HTML
 
-
-
 ---- ✅ **Cross-Browser** - Works on all modern browsers
-
-
 
 ## 📁 Project Structure---
 
-
-
-```---
+`````---
 
 street66/
 
@@ -192,9 +178,9 @@ street66/
 
    npx http-server├── js/├── gallery.html            # Photo gallery with 31 bar photos + pets
 
-   ```
+`````
 
-│   └── main.js            # Carousel, lightbox, interactions├── contact.html            # Contact form & location
+│ └── main.js # Carousel, lightbox, interactions├── contact.html # Contact form & location
 
 3. **Navigate the site:**
 
@@ -202,43 +188,35 @@ street66/
 
    - **Gallery** - Interactive carousel and pet photos
 
-   - **Contact** - Location, booking form, and directions    └── images/│   └── style.css          # Main stylesheet (3900+ lines)
+   - **Contact** - Location, booking form, and directions └── images/│ └── style.css # Main stylesheet (3900+ lines)
 
+--- ├── gallery_optimized/ # 36 WebP images├── js/
 
+## 📱 Pages Overview ├── backgrounds/cocktails/ # 11 cocktail photos│ └── main.js # Gallery carousel, cocktails, lightbox
 
----        ├── gallery_optimized/  # 36 WebP images├── js/
-
-
-
-## 📱 Pages Overview        ├── backgrounds/cocktails/  # 11 cocktail photos│   └── main.js            # Gallery carousel, cocktails, lightbox
-
-
-
-### 🏠 Home (`index.html`)        ├── dogs/               # 16 pet photos└── assets/
+### 🏠 Home (`index.html`) ├── dogs/ # 16 pet photos└── assets/
 
 - Hero section with street66.webp background
 
-- Spotify playlist player        ├── branding/           # Logo    └── images/
+- Spotify playlist player ├── branding/ # Logo └── images/
 
 - "Our Two Worlds" showcase (Bar & Lounge)
 
-- Signature cocktails carousel with elegant script font        ├── cards/              # Event thumbnails        ├── gallery_optimized/  # 36 WebP images (6.3MB)
+- Signature cocktails carousel with elegant script font ├── cards/ # Event thumbnails ├── gallery_optimized/ # 36 WebP images (6.3MB)
 
 - Upcoming events (DJ Pixie-Woo, Pride Night)
 
-- Opening hours modal        └── social/             # Social media icons        ├── dogs/               # 16 pet photos
+- Opening hours modal └── social/ # Social media icons ├── dogs/ # 16 pet photos
 
-
-
-### 🖼️ Gallery (`gallery.html`)```        ├── backgrounds/        # Hero & section backgrounds
+### 🖼️ Gallery (`gallery.html`)``` ├── backgrounds/ # Hero & section backgrounds
 
 - Main carousel with 31 bar photos
 
-- Thumbnail navigation with smooth transitions        │   └── cocktails/      # 11 cocktail photos
+- Thumbnail navigation with smooth transitions │ └── cocktails/ # 11 cocktail photos
 
 - Pet-friendly gallery (16 dog photos)
 
-- Lightbox modal for full-screen viewing---        ├── branding/           # Logo
+- Lightbox modal for full-screen viewing--- ├── branding/ # Logo
 
 - Keyboard navigation support (arrows, ESC)
 
@@ -246,7 +224,7 @@ street66/
 
 ### 📧 Contact (`contact.html`)
 
-- Interactive Google Maps integration## 🚀 Quick Start        └── social/             # TikTok, Instagram, Facebook icons
+- Interactive Google Maps integration## 🚀 Quick Start └── social/ # TikTok, Instagram, Facebook icons
 
 - Contact form with email functionality
 
