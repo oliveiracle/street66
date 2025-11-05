@@ -1138,7 +1138,9 @@ img[src*="cards/"] {
 
 .cocktails-section {
      padding: 80px 20px;
-     background: linear-gradient(135deg, rgba(44, 24, 16, 0.95), rgba(114, 47, 55, 0.9));
+     background: 
+          linear-gradient(135deg, rgba(44, 24, 16, 0.92), rgba(114, 47, 55, 0.88)),
+          url(../assets/images/gallery_optimized/street66.webp) center center/cover no-repeat;
      position: relative;
      overflow: hidden;
 }
