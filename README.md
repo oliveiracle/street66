@@ -1,15 +1,10 @@
 # 🎭 Street 66 Bar - Official Website
 
-[![Live Site](https://img.shields.io/badge/Live-Site-gold?style=for-the-badge&logo=github)](https://oliveiracle.github.io/street66/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 > **A stunning vintage-themed website for Street 66 Bar, located in the heart of Temple Bar, Dublin. Experience the perfect blend of classic aesthetics and modern web design.**
-
-## 🌟 Live Demo
-
-**[View Live Site →](https://oliveiracle.github.io/street66/)**
 
 ---
 
@@ -21,20 +16,20 @@ Street 66 Bar is a unique establishment in Dublin's iconic Temple Bar district, 
 - 🍸 **Signature Cocktails** - Crafted by expert mixologists
 - 🎨 **Vintage Vibes** - Classic bar atmosphere with Andy Warhol inspiration
 - 🐕 **Pet-Friendly** - Your furry friends are welcome!
-- 📍 **Perfect Location** - 33-34 Parliament St, Temple Bar, Dublin 2
+- 📍 **Perfect Location** - 33-34 Parliament St, Temple Bar, Dublin 2, Ireland
 
 ## ✨ Features
 
 - ✅ **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
-- ✅ **Performance Optimized** - WebP images with 89% size reduction
-- ✅ **Interactive Gallery** - 31 bar photos with carousel navigation
-- ✅ **Pet Gallery** - Lightbox showcase of 16 furry friends
-- ✅ **Cocktails Carousel** - 11 signature drinks with elegant presentation
+- ✅ **Performance Optimized** - WebP images with 97-98% size reduction
+- ✅ **Interactive Gallery** - 37 bar photos with carousel navigation
+- ✅ **Pet Gallery** - Carousel showcase of 26 furry friends
+- ✅ **Cocktails Carousel** - 20 signature drinks with elegant presentation
 - ✅ **Event Cards** - DJ Pixie-Woo schedule and special events
-- ✅ **Contact Page** - Integrated Google Maps and booking form
-- ✅ **SEO Optimized** - Complete meta tags and Schema.org structured data
+- ✅ **Contact Page** - Integrated Google Maps and booking information
+- ✅ **SEO Optimized** - Complete meta tags for search engines
 - ✅ **Accessibility** - ARIA labels and semantic HTML
-- ✅ **Google Analytics** - Full visitor tracking integration
+- ✅ **Google Analytics** - Full visitor tracking integration (G-E0K0ZMD9E3)
 
 ## 🛠️ Tech Stack
 
@@ -62,9 +57,9 @@ street66/
 └── assets/
    └── images/
       ├── gallery_optimized/  # 36 WebP images (6.3MB)
-      ├── dogs/               # 16 pet photos
+      ├── dogs/               # 26 pet photos
       ├── backgrounds/        # Hero & section backgrounds
-      │   └── cocktails/      # 11 cocktail photos
+      │   └── cocktails/      # 20 cocktail photos
       ├── branding/           # Logo
       ├── cards/              # Event cards (DJ Pixie-Woo, Pride)
       └── social/             # TikTok, Instagram, Facebook icons
@@ -108,16 +103,16 @@ street66/
 
 ### 🖼️ Gallery (`gallery.html`)
 
-- Main carousel with 31 bar photos
+- Main carousel with 37 bar photos
 - Thumbnail navigation with smooth transitions
-- Pet-friendly gallery (16 dog photos)
-- Lightbox modal for full-screen viewing
-- Keyboard navigation support (arrows, ESC)
+- Pet-friendly gallery (26 dog photos)
+- Full carousel navigation for both galleries
+- Optimized WebP images for fast loading
 
 ### 📧 Contact (`contact.html`)
 
 - Interactive Google Maps integration
-- Contact form with email functionality
+- Bar location and contact details
 - Review buttons (TripAdvisor & Google)
 - Fully responsive 2-column layout
 

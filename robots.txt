@@ -1,0 +1,10 @@
+# Street 66 Bar - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.street66bar.com/sitemap.xml
+
+# Disallow admin or private directories (if any in future)
+Disallow: /admin/
+Disallow: /*.log$

@@ -4,7 +4,7 @@
 
 // Gallery Carousel
 let currentSlideIndex = 0;
-const totalSlides = 31;  // ATUALIZADO: 15 fotos antigas + 16 novas = 31 total
+const totalSlides = 37;  // ATUALIZADO: 37 fotos únicas no total
 
 function showSlide(n) {
     const slides = document.querySelectorAll('.carousel-slide');
@@ -43,7 +43,7 @@ function goToSlide(n) {
 
 // Pet Carousel
 let currentPetSlideIndex = 0;
-const totalPetSlides = 16;
+const totalPetSlides = 26;
 
 function showPetSlide(n) {
     const petWrapper = document.getElementById('petCarouselWrapper');
