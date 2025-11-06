@@ -2539,8 +2539,8 @@ img[src*="cards/"] {
           align-items: center;
      }
      .cocktails-carousel {
-          width: calc(100vw - 100px);
-          max-width: 420px;
+          width: calc(100vw - 60px);
+          max-width: 520px;
           aspect-ratio: 1 / 1;
      }
      .cocktail-nav-btn {
@@ -2745,8 +2745,8 @@ img[src*="cards/"] {
           font-size: 2.2rem;
      }
      .cocktails-carousel {
-          width: calc(100vw - 100px);
-          max-width: 220px;
+          width: calc(100vw - 70px);
+          max-width: 340px;
      }
      .cocktail-nav-btn {
           width: 36px;

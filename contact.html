@@ -180,5 +180,20 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+        // Clear form after submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    // Form will submit normally to Formspree
+                    // After a short delay, clear the form
+                    setTimeout(function() {
+                        form.reset();
+                    }, 100);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

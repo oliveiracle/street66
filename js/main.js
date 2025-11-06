@@ -43,7 +43,7 @@ function goToSlide(n) {
 
 // Pet Carousel
 let currentPetSlideIndex = 0;
-const totalPetSlides = 26;
+const totalPetSlides = 25;
 
 function showPetSlide(n) {
     const petWrapper = document.getElementById('petCarouselWrapper');
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // =========================
 
 let currentCocktailIndex = 0;
-const totalCocktails = 11;
+const totalCocktails = 20;
 
 function showCocktail(index) {
     const slides = document.querySelectorAll('.cocktail-slide');
