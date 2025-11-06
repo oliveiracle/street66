@@ -82,7 +82,7 @@
             <!-- Contact Form -->
             <div class="contact-form-box">
                 <h2>Send us a Message</h2>
-                <form class="contact-form" onsubmit="return handleSubmit(event)">
+                <form class="contact-form" action="https://formspree.io/f/xkgpdzop" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -102,10 +102,11 @@
                             <label for="subject">Subject</label>
                             <select id="subject" name="subject" required>
                                 <option value="">Select a subject</option>
-                                <option value="General Inquiry">General Inquiry</option>
-                                <option value="Event Booking">Event Booking</option>
-                                <option value="Private Party">Private Party</option>
+                                <option value="Reservation">Reservation</option>
+                                <option value="Question">Question</option>
                                 <option value="Feedback">Feedback</option>
+                                <option value="Event Inquiry">Event Inquiry</option>
+                                <option value="Complaint">Complaint</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
@@ -177,26 +178,6 @@
             <p class="hours-note">33-34 Parliament St, Temple Bar, Dublin 2</p>
         </div>
     </div>
-
-    <script>
-        // Handle contact form submit - open email
-        function handleSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            
-            const subject = encodeURIComponent(`[Street 66 Contact] ${form.subject.value}`);
-            const message = encodeURIComponent(
-                `Name: ${form.name.value}\n` +
-                `Email: ${form.email.value}\n` +
-                `Phone: ${form.phone.value}\n\n` +
-                `Message:\n${form.message.value}`
-            );
-            
-            // Open email client
-            window.location.href = `mailto:streeti1@street66.ie?subject=${subject}&body=${message}`;
-            return false;
-        }
-    </script>
 
     <script src="js/main.js"></script>
 </body>
