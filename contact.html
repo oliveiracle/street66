@@ -82,38 +82,37 @@
             <!-- Contact Form -->
             <div class="contact-form-box">
                 <h2>Send us a Message</h2>
-                <form class="contact-form" action="process_contact.php" method="POST">
+                <form class="contact-form" onsubmit="return handleSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Your name">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+353 86 123 4567">
+                            <input type="tel" id="phone" name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject *</label>
+                            <label for="subject">Subject</label>
                             <select id="subject" name="subject" required>
                                 <option value="">Select a subject</option>
-                                <option value="Reservation">Reservation</option>
-                                <option value="Question">Question</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Event Booking">Event Booking</option>
+                                <option value="Private Party">Private Party</option>
                                 <option value="Feedback">Feedback</option>
-                                <option value="Event Inquiry">Event Inquiry</option>
-                                <option value="Complaint">Complaint</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Your message..." minlength="10" maxlength="1000"></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
@@ -180,40 +179,22 @@
     </div>
 
     <script>
-        // Show success/error messages from PHP
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
+        // Handle contact form submit - open email
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
             
-            if (urlParams.has('success')) {
-                showMessage('✅ Thank you! Your message has been sent successfully. We\'ll get back to you soon!', 'success');
-                // Clear URL parameters
-                window.history.replaceState({}, document.title, window.location.pathname);
-            }
+            const subject = encodeURIComponent(`[Street 66 Contact] ${form.subject.value}`);
+            const message = encodeURIComponent(
+                `Name: ${form.name.value}\n` +
+                `Email: ${form.email.value}\n` +
+                `Phone: ${form.phone.value}\n\n` +
+                `Message:\n${form.message.value}`
+            );
             
-            if (urlParams.has('error')) {
-                const error = urlParams.get('error');
-                showMessage('❌ ' + error, 'error');
-                // Clear URL parameters after 1 second
-                setTimeout(() => {
-                    window.history.replaceState({}, document.title, window.location.pathname);
-                }, 1000);
-            }
-        });
-
-        function showMessage(message, type) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `form-message ${type}`;
-            messageDiv.textContent = message;
-            
-            const formBox = document.querySelector('.contact-form-box');
-            const form = document.querySelector('.contact-form');
-            formBox.insertBefore(messageDiv, form);
-            
-            // Auto-hide after 8 seconds
-            setTimeout(() => {
-                messageDiv.style.opacity = '0';
-                setTimeout(() => messageDiv.remove(), 500);
-            }, 8000);
+            // Open email client
+            window.location.href = `mailto:streeti1@street66.ie?subject=${subject}&body=${message}`;
+            return false;
         }
     </script>
 
