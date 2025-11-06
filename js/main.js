@@ -124,43 +124,6 @@ function initHoursModal() {
 }
 
 // =========================
-// GLOBAL INITIALIZATION
-// =========================
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Hours Modal (Home page)
-    initHoursModal();
-    
-    // Gallery page initialization
-    if (document.querySelector('.carousel-slide')) {
-        showSlide(0);
-        initPetGallery();
-        
-        // Auto-advance carousel every 8 seconds
-        setInterval(() => {
-            nextSlide();
-        }, 8000);
-        
-        // Close lightbox on outside click
-        const lightbox = document.getElementById('lightbox');
-        if (lightbox) {
-            lightbox.addEventListener('click', (e) => {
-                if (e.target.id === 'lightbox') {
-                    closeLightbox();
-                }
-            });
-        }
-    }
-    
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' && typeof nextSlide === 'function') nextSlide();
-        if (e.key === 'ArrowLeft' && typeof previousSlide === 'function') previousSlide();
-        if (e.key === 'Escape' && typeof closeLightbox === 'function') closeLightbox();
-    });
-});
-
-// =========================
 // COCKTAILS CAROUSEL
 // =========================
 
@@ -205,9 +168,49 @@ function gotoCocktail(index) {
     showCocktail(index);
 }
 
-// Auto-advance cocktails carousel every 5 seconds
-if (document.querySelector('.cocktails-carousel')) {
-    setInterval(() => {
-        nextCocktail();
-    }, 5000);
-}
+// =========================
+// GLOBAL INITIALIZATION
+// =========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Hours Modal (Home page)
+    initHoursModal();
+    
+    // Gallery page initialization
+    if (document.querySelector('.carousel-slide')) {
+        showSlide(0);
+        initPetGallery();
+        
+        // Auto-advance carousel every 8 seconds
+        setInterval(() => {
+            nextSlide();
+        }, 8000);
+        
+        // Close lightbox on outside click
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target.id === 'lightbox') {
+                    closeLightbox();
+                }
+            });
+        }
+    }
+    
+    // Initialize cocktails carousel on home page
+    if (document.querySelector('.cocktails-carousel')) {
+        showCocktail(0);
+        
+        // Auto-advance cocktails carousel every 5 seconds
+        setInterval(() => {
+            nextCocktail();
+        }, 5000);
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' && typeof nextSlide === 'function') nextSlide();
+        if (e.key === 'ArrowLeft' && typeof previousSlide === 'function') previousSlide();
+        if (e.key === 'Escape' && typeof closeLightbox === 'function') closeLightbox();
+    });
+});
