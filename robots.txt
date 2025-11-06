@@ -2,9 +2,11 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://www.street66bar.com/sitemap.xml
+# Sitemaps
+Sitemap: http://street66bar.ie/sitemap.xml
+Sitemap: https://oliveiracle.github.io/street66/sitemap.xml
 
-# Disallow admin or private directories (if any in future)
+# Disallow admin or private directories
 Disallow: /admin/
+Disallow: /cgi-bin/
 Disallow: /*.log$

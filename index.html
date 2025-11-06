@@ -63,16 +63,23 @@
       "@context": "https://schema.org",
       "@type": "BarOrPub",
       "name": "Street 66 Bar",
-      "image": "https://street66dublin.com/assets/images/branding/logo3.png",
-      "description": "Vintage bar in Temple Bar offering live music, craft cocktails, and unique Andy Warhol-inspired atmosphere.",
-      "@id": "https://street66dublin.com",
-      "url": "https://street66dublin.com",
+      "alternateName": "Street66 Dublin",
+      "image": [
+        "http://street66bar.ie/assets/images/branding/logo3.png",
+        "http://street66bar.ie/assets/images/gallery_optimized/street66.webp",
+        "http://street66bar.ie/assets/images/gallery_optimized/street662.webp"
+      ],
+      "description": "Dublin's iconic vintage bar in Temple Bar featuring live DJ nights every Friday & Saturday, craft cocktails, pet-friendly atmosphere, and Andy Warhol-inspired decor. Home of DJ Pixie-Woo, Pride Poets, and weekly board game nights.",
+      "@id": "http://street66bar.ie",
+      "url": "http://street66bar.ie",
+      "telephone": "+353-1-XXX-XXXX",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "33-34 Parliament St, Temple Bar",
         "addressLocality": "Dublin",
-        "postalCode": "Dublin 2",
+        "addressRegion": "County Dublin",
+        "postalCode": "D02",
         "addressCountry": "IE"
       },
       "geo": {
@@ -109,10 +116,29 @@
       "sameAs": [
         "https://www.instagram.com/street66dublin/",
         "https://www.tiktok.com/@street66dublin",
-        "https://www.facebook.com/street66bar"
+        "https://www.facebook.com/street66Dublin/",
+        "https://oliveiracle.github.io/street66/"
       ],
-      "servesCuisine": "Bar food, Cocktails",
-      "hasMap": "https://www.google.com/maps?q=33-34+Parliament+St,+Temple+Bar,+Dublin+2"
+      "servesCuisine": "Bar food, Cocktails, Craft Drinks",
+      "hasMap": "https://www.google.com/maps?q=33-34+Parliament+St,+Temple+Bar,+Dublin+2",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Pet Friendly",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Live Music",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wheelchair Accessible",
+          "value": true
+        }
+      ],
+      "keywords": "Temple Bar, Dublin nightlife, vintage bar, cocktail bar, live DJ, pet friendly bar, LGBTQ+ friendly, board games bar"
     }
     </script>
 </head>
